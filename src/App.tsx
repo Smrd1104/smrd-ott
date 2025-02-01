@@ -1,11 +1,14 @@
+import HeroSlider from './components/hero'
+import Header from './components/navbar'
 import './index.css'
 
 function App() {
 
   return (
-      <div  className='bg-red-500 '>
-       <h1 className='text-white'>Riyas</h1> 
-       </div>
+      <div>
+        <Header/>
+        <HeroSlider/>
+      </div>
    
   )
 }
