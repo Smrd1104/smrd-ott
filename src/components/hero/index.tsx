@@ -1,9 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay'; // Import autoplay CSS
+import 'swiper/swiper-bundle.css'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'; // Import Autoplay module
 import video1 from '../../assets/bg-3.mp4'
 import video2 from '../../assets/bg-2.mp4'
