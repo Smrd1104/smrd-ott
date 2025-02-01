@@ -1,10 +1,13 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'
-import { Navigation, Pagination, Autoplay } from 'swiper/modules'; // Import Autoplay module
+import { Pagination,Autoplay } from 'swiper/modules'; // Import Autoplay module
 import video1 from '../../assets/bg-3.mp4'
 import video2 from '../../assets/bg-2.mp4'
 import video3 from '../../assets/bg-1.mp4'
+import video4 from '../../assets/bg-4.mp4'
+import video5 from '../../assets/bg-5.mp4'
+
 
 const HeroSlider: React.FC = () => {
   const slides = [
@@ -27,15 +30,27 @@ const HeroSlider: React.FC = () => {
       description: "Another exciting adventure in space.",
       video: video3, // Replace with your video URL
     },
+    {
+      title: "OST IN SPACE",
+      subtitle: "Trending Now",
+      description: "Another exciting adventure in space.",
+      video: video4, // Replace with your video URL
+    },
+    {
+      title: "OST IN SPACE",
+      subtitle: "Trending Now",
+      description: "Another exciting adventure in space.",
+      video: video5, // Replace with your video URL
+    },
   
     // Add more slides as needed
   ];
 
   return (
     <Swiper
-      navigation
+      
       pagination={{ clickable: true }}
-      modules={[Navigation, Pagination, Autoplay]} // Add Autoplay module
+      modules={[Pagination,Autoplay]} // Add Autoplay module
       className="w-full h-screen"
       autoplay={{ delay: 3000, disableOnInteraction: false }} // Autoplay configuration
       loop={true} // Enable infinite loop
@@ -46,7 +61,6 @@ const HeroSlider: React.FC = () => {
             {/* Video Background */}
             <video
               autoPlay
-              muted
               loop
               className="absolute top-0 left-0 w-full h-full object-cover z-0"
             >

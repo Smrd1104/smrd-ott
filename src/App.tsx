@@ -1,16 +1,23 @@
-import HeroSlider from './components/hero'
-import Header from './components/navbar'
-import './index.css'
+  import { useState } from "react";
+  import Sidebar from "../src/components/sidebar";
+  import Home from '../src/pages/home';
 
-function App() {
+  function App() {
+    const [isExpanded, setIsExpanded] = useState(false);
 
-  return (
-      <div>
-        <Header/>
-        <HeroSlider/>
+    return (
+      <div className="flex min-h-screen bg-black text-white">
+        {/* Sidebar */}
+        <div className={`${isExpanded ? " bg-black/10 w-200" : "w-80"} `}>
+          <Sidebar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
+        </div>
+
+        {/* Main Content */}
+        <div className=" overflow-y-auto ">
+          <Home />
+        </div>
       </div>
-   
-  )
-}
+    );
+  }
 
-export default App
+  export default App;
