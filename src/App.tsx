@@ -8,7 +8,7 @@
     return (
       <div className="flex min-h-screen bg-black text-white">
         {/* Sidebar */}
-        <div className={`${isExpanded ? " bg-black/10 w-200" : "w-80"} `}>
+        <div className={`${isExpanded ? " bg-black/10 w-220" : "w-80"} transition-all duration-300 `}>
           <Sidebar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
         </div>
 
