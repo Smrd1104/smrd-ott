@@ -1,26 +1,31 @@
-import { useEffect, useRef, useState } from "react";
-import { FaHome, FaInfoCircle, FaProjectDiagram, FaPhone, FaUserLock, FaUser, FaSearch, FaLaptop, FaMobile, FaFootballBall, FaFile, FaBowlingBall, FaVolleyballBall } from "react-icons/fa";
-import logoBlack from "../../assets/spider.png";
+// Sidebar.tsx
+import React, { useEffect, useRef, useState } from "react";
+import { FaHome, FaSearch, FaUser, FaLaptop, FaVolleyballBall } from "react-icons/fa";
 import { BiCameraMovie, BiSolidCategory } from "react-icons/bi";
+import logoBlack from "../../assets/spider.png";
+
+type SidebarProps = {
+  setIsExpanded: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
 const NAV_LINKS = [
   { name: "Profile", href: "/#profile", icon: <FaUser size={20} /> },
   { name: "Search", href: "/#search", icon: <FaSearch size={20} /> },
   { name: "Home", href: "/", icon: <FaHome size={20} /> },
   { name: "Tv", href: "/#tv", icon: <FaLaptop size={20} /> },
-  { name: "Movies", href: "/#movies", icon: <BiCameraMovie  size={20} /> },
+  { name: "Movies", href: "/#movies", icon: <BiCameraMovie size={20} /> },
   { name: "Sports", href: "/#sports", icon: <FaVolleyballBall size={20} /> },
-  { name: "Categories", href: "/#categories", icon: <BiSolidCategory  size={20} /> },
+  { name: "Categories", href: "/#categories", icon: <BiSolidCategory size={20} /> },
 ];
 
-const Sidebar = ({ setIsExpanded }) => {
-  const [activeLink, setActiveLink] = useState("/"); // Default active link
-  const sidebarRef = useRef(null);
+const Sidebar: React.FC<SidebarProps> = ({ setIsExpanded }) => {
+  const [activeLink, setActiveLink] = useState<string>("/"); // Default active link
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
 
   // Close sidebar when clicking outside
   useEffect(() => {
-    const handleOutsideClick = (e) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(e.target as Node)) {
         setIsExpanded(false);
       }
     };
@@ -32,16 +37,16 @@ const Sidebar = ({ setIsExpanded }) => {
     };
   }, [setIsExpanded]);
 
-  const handleLinkClick = (href) => {
+  const handleLinkClick = (href: string) => {
     setActiveLink(href); // Set the clicked link as active
   };
 
   return (
     <div
       ref={sidebarRef}
-      onMouseEnter={() => setIsExpanded(true)}  // Expand on hover
+      onMouseEnter={() => setIsExpanded(true)} // Expand on hover
       onMouseLeave={() => setIsExpanded(false)} // Collapse on hover out
-      className={`fixed top-0 left-0 h-full bg-black/10 text-white p-6 transition-all duration-300`}
+      className="fixed top-0 left-0 h-full bg-black/10 text-white p-6 transition-all duration-300"
     >
       {/* Logo */}
       <div className="flex justify-start my-4">
