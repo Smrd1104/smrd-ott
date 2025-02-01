@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "smrd-ott",
+    "shop": "smrd-ott"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
