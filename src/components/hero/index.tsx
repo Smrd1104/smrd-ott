@@ -62,6 +62,7 @@ const HeroSlider: React.FC = () => {
             <video
               autoPlay
               loop
+              muted
               className="absolute top-0 left-0 w-full h-full object-cover z-0"
             >
               <source src={slide.video} type="video/mp4" />
