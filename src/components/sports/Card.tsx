@@ -9,9 +9,9 @@ const Card = ({ title, image }: CardProps) => {
       <img
         src={image}
         alt={title}
-        className="w-[300px] h-[250px] rounded-md border shadow-lg"
+        className="w-[300px] h-[250px] rounded-md border  shadow-lg"
       />
-      <div className="absolute bottom-3 left-3 bg-black/50 text-white p-2 rounded-md text-sm">
+      <div className="absolute bottom-3 drop-shadow  left-3 bg-black/50 text-white p-2 rounded-md text-sm">
         {title}
         <div>
      

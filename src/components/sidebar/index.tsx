@@ -49,10 +49,11 @@ const Sidebar: React.FC<SidebarProps> = ({ setIsExpanded }) => {
       className="hidden lg:block fixed top-0 -translate-x-2 left-0 h-full bg-black/10 text-white p-6 transition-all duration-300"
     >
       {/* Logo */}
+      <a href="/">
       <div className="flex justify-start my-4 drop-shadow-header">
         <img src={logoBlack} alt="Logo" className="w-7 h-auto  rounded-full shadow-lg" />
       </div>
-
+      </a>
       {/* Navigation Links */}
       <ul className="flex flex-col gap-10 text-lg mt-10 ">
         {NAV_LINKS.map((link) => (
