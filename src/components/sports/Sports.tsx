@@ -23,6 +23,14 @@ const CardSlider = () => {
     { id: 6, title: "Hockey", image: img6 },
     { id: 7, title: "Golf", image: img7 },
     { id: 8, title: "Volleyball", image: img8 },
+    { id: 9, title: "Football", image: img7 },
+    { id: 10, title: "Cricket", image: img6 },
+    { id: 11, title: "Tennis", image: img5 },
+    { id: 12, title: "Archery", image: img4 },
+    { id: 13, title: "Baseball", image: img3 },
+    { id: 14, title: "Hockey", image: img2 },
+    { id: 15, title: "Golf", image: img1 },
+    { id: 16, title: "Volleyball", image: img6 },
   ];
 
   return (
@@ -34,6 +42,7 @@ const CardSlider = () => {
         navigation // Enable navigation arrows
         pagination={{ clickable: false }} // Enable pagination dots
         autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
         breakpoints={{
           320: { slidesPerView: 1 },  // Mobile
           640: { slidesPerView: 2 },  // Small tablets
