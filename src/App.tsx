@@ -8,12 +8,12 @@ function App() {
   return (
     <div className="flex min-h-screen bg-black text-white">
       {/* Sidebar */}
-      <div className={`${isExpanded ? " bg-black/10 md:w-220" : "md:w-70"} transition-all duration-300`}>
+      <div className={`${isExpanded ? "md:w-40" : "md:w-12"} transition-all duration-300`}>
         <Sidebar setIsExpanded={setIsExpanded} /> {/* Only pass setIsExpanded */}
       </div>
 
       {/* Main Content */}
-      <div className="overflow-y-auto">
+      <div className="flex-1 overflow-y-auto bg-black relative transition-all duration-300">
         <Home />
       </div>
     </div>
@@ -21,4 +21,3 @@ function App() {
 }
 
 export default App;
-

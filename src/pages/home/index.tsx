@@ -1,9 +1,11 @@
 import HeroSlider from '../../components/hero'
+import Sports from '../../components/sports/Sports'
 
 const index = () => {
   return (
-    <div>
+    <div className=''>
         <HeroSlider/>
+        <Sports/>
     </div>
   )
 }

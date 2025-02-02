@@ -62,7 +62,7 @@ const HeroSlider: React.FC = () => {
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>
-          <div className="w-full h-full flex flex-col justify-left  items-left  text-white text-center relative">
+          <div className="w-full h-full flex flex-col text-white relative">
             {/* Video Background */}
             <video
               autoPlay
@@ -74,16 +74,16 @@ const HeroSlider: React.FC = () => {
               Your browser does not support the video tag.
             </video>
             {/* Content Overlay */}
-            <div className="relative text-left -translate-x-48  translate-y-72 w-200     z-10 container mx-auto">
+            <div className="relative text-left  translate-y-72 left-5 z-10 container mx-auto">
             <img
             src={logo}
             alt="Logo"
             className="object-cover w-[90px] h-auto transition-all  duration-300"
           />
-              <h1 className="text-3xl  font-bold mb-4 font-bold mt-5">{slide.title}</h1>
-              <h2 className="text-xl mb-4">{slide.subtitle}</h2>
-              <p className="text-lg max-w-2xl mb-4 text-gray-200">{slide.description}</p>
-              <h2 className="text-md  mb-4">{slide.subtitle2}</h2>
+              <h1 className="text-4xl  font-bold mb-4 font-bold mt-5">{slide.title}</h1>
+              <h2 className="text-xl mb-4  font-bold">{slide.subtitle}</h2>
+              <p className="text-lg max-w-2xl mb-4 text-gray-200  font-bold">{slide.description}</p>
+              <h2 className="text-md  mb-4  font-bold">{slide.subtitle2}</h2>
 
             </div>
           </div>
