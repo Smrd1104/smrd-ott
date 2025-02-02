@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import video from '../../assets/bg-3.mp4';
 import VideoCard from './VideoCard';
 
 interface CardProps {

@@ -1,5 +1,4 @@
   import football from '../../assets/football.mp4';
-  import video from '../../assets/bg-3.mp4';
 
   const VideoCard = () => {
     return (
