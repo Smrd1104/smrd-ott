@@ -19,7 +19,7 @@ const Card = ({ title, image }: CardProps) => {
       <img
         src={image}
         alt={title}
-        className="w-[300px] h-[280px] rounded-md border shadow-lg object-cover transition-opacity duration-300 group-hover:opacity-0" // Fade out on hover
+        className="w-[250px] h-[280px] rounded-md border shadow-lg object-cover transition-opacity duration-300 group-hover:opacity-0" // Fade out on hover
       />
 
       {/* Card Title */}
@@ -29,7 +29,7 @@ const Card = ({ title, image }: CardProps) => {
 
       {/* VideoCard on Hover */}
       {isHovered && (
-        <div className="absolute  drop-shadow-header inset-0 z-10 md:-translate-x-4.5 -translate-x-4 transition-all duration-300 transform scale-100 group-hover:scale-105">
+        <div className="absolute  inset-0 z-10  transition-all duration-300 transform scale-105  group-hover:scale-105">
           <VideoCard />
         </div>
       )}
