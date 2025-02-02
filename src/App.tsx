@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="flex min-h-screen bg-black text-white">
       {/* Sidebar */}
-      <div className={`${isExpanded ? "md:w-40" : "md:w-12"} transition-all duration-300`}>
+      <div className={`${isExpanded ? "md:w-40" : "md:w-14"} transition-all duration-300`}>
         <Sidebar setIsExpanded={setIsExpanded} /> {/* Only pass setIsExpanded */}
       </div>
 

@@ -1,4 +1,3 @@
-// Sidebar.tsx
 import React, { useEffect, useRef, useState } from "react";
 import { FaHome, FaSearch, FaUser, FaLaptop, FaVolleyballBall } from "react-icons/fa";
 import { BiCameraMovie, BiSolidCategory } from "react-icons/bi";
@@ -9,13 +8,13 @@ type SidebarProps = {
 };
 
 const NAV_LINKS = [
-  { name: "Profile", href: "/#profile", icon: <FaUser size={20} /> },
-  { name: "Search", href: "/#search", icon: <FaSearch size={20} /> },
+  { name: "Profile", href: "#profile", icon: <FaUser size={20} /> },
+  { name: "Search", href: "#search", icon: <FaSearch size={20} /> },
   { name: "Home", href: "/", icon: <FaHome size={20} /> },
-  { name: "Tv", href: "/#tv", icon: <FaLaptop size={20} /> },
-  { name: "Movies", href: "/#movies", icon: <BiCameraMovie size={20} /> },
-  { name: "Sports", href: "/#sports", icon: <FaVolleyballBall size={20} /> },
-  { name: "Categories", href: "/#categories", icon: <BiSolidCategory size={20} /> },
+  { name: "Tv", href: "#tv", icon: <FaLaptop size={20} /> },
+  { name: "Movies", href: "#movies", icon: <BiCameraMovie size={20} /> },
+  { name: "Sports", href: "#sports", icon: <FaVolleyballBall size={20} /> },
+  { name: "Categories", href: "#categories", icon: <BiSolidCategory size={20} /> },
 ];
 
 const Sidebar: React.FC<SidebarProps> = ({ setIsExpanded }) => {
@@ -50,26 +49,25 @@ const Sidebar: React.FC<SidebarProps> = ({ setIsExpanded }) => {
     >
       {/* Logo */}
       <a href="/">
-      <div className="flex justify-start my-4 drop-shadow-header">
-        <img src={logoBlack} alt="Logo" className="w-7 h-auto  rounded-full shadow-lg" />
-      </div>
+        <div className="flex justify-start my-4 drop-shadow">
+          <img src={logoBlack} alt="Logo" className="w-10 -translate-x-2 h-auto rounded-full" />
+        </div>
       </a>
       {/* Navigation Links */}
-      <ul className="flex flex-col gap-10 text-lg mt-10 ">
+      <ul className="flex flex-col gap-10 text-lg mt-10">
         {NAV_LINKS.map((link) => (
           <li key={link.name} className="flex items-center">
             <a
               href={link.href}
-              onClick={(e) => {
-                e.preventDefault(); // Prevent default link behavior
-                handleLinkClick(link.href);
-              }}
+              onClick={() => handleLinkClick(link.href)} // No preventDefault here
               className={`flex items-center font-bold gap-5 w-full 
-                ${activeLink === link.href ? 'text-white' : 'text-gray-300'} 
+                ${activeLink === link.href ? "text-white" : "text-gray-300"} 
                 hover:text-white`}
             >
               {link.icon}
-              <span className={`${activeLink === link.href ? 'text-white' : 'text-gray-300'} font-bold hover:text-white`}>
+              <span
+                className={`${activeLink === link.href ? "text-white" : "text-gray-300"} font-bold hover:text-white`}
+              >
                 {link.name}
               </span>
             </a>

@@ -1,9 +1,27 @@
-import React from 'react'
+  import football from '../../assets/football.mp4';
+  import video from '../../assets/bg-3.mp4';
 
-const VideoCard = () => {
-  return (
-    <div>VideoCard</div>
-  )
-}
+  const VideoCard = () => {
+    return (
+      <div className="w-[310px] h-[280px] border rounded-md  bg-black">
+        <video
+          autoPlay
+          loop
+          muted
+          className="w-full h-full rounded-md shadow-lg object-cover"
+        >
+          <source src={football} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute bottom-0 left-0 right-0 mx-5 flex flex-col gap-2 mt-2 pb-5">
+          <button className="border px-8 py-2 bg-white/10 rounded mt-1 text-white">
+            Watch Now
+          </button>
+          <h1 className="text-sm text-white">2025 . U/A 2025 . 1 Season</h1>
+          <p className="text-sm text-white">Spider-free milestones are a mission to protect...</p>
+        </div>
+      </div>
+    );
+  };
 
-export default VideoCard
+  export default VideoCard;
