@@ -23,7 +23,7 @@ const Card = ({ title, image }: CardProps) => {
       />
 
       {/* Card Title */}
-      <div className="absolute bottom-3 left-3 bg-black/50 text-white p-2 rounded-md text-sm">
+      <div className="absolute bottom-3 left-3 bg-black/50 text-white p-2 drop-shadow rounded-md text-sm">
         {title}
       </div>
 
