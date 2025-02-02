@@ -2,8 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { HiX } from "react-icons/hi";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
-import logoBlack from "../../assets/spider.png";
-import logoWhite from "../../assets/spider.png";
+import logoBlack from "../../assets/logo-new.png";
+import logoWhite from "../../assets/logo-new.png";
 
 interface NavLink {
   name: string;

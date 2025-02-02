@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaHome, FaSearch, FaUser, FaLaptop, FaVolleyballBall } from "react-icons/fa";
 import { BiCameraMovie, BiSolidCategory } from "react-icons/bi";
-import logoBlack from "../../assets/spider.png";
+import logoBlack from "../../assets/logo-new.png";
 
 type SidebarProps = {
   setIsExpanded: React.Dispatch<React.SetStateAction<boolean>>;
@@ -46,15 +46,15 @@ const Sidebar: React.FC<SidebarProps> = ({ setIsExpanded }) => {
       ref={sidebarRef}
       onMouseEnter={() => setIsExpanded(true)} // Expand on hover
       onMouseLeave={() => setIsExpanded(false)} // Collapse on hover out
-      className="hidden lg:block fixed top-0 left-0 h-full bg-black/10 text-white p-6 transition-all duration-300"
+      className="hidden lg:block fixed top-0 -translate-x-2 left-0 h-full bg-black/10 text-white p-6 transition-all duration-300"
     >
       {/* Logo */}
-      <div className="flex justify-start my-4">
-        <img src={logoBlack} alt="Logo" className="w-7 h-auto rounded-full shadow-lg" />
+      <div className="flex justify-start my-4 drop-shadow-header">
+        <img src={logoBlack} alt="Logo" className="w-7 h-auto  rounded-full shadow-lg" />
       </div>
 
       {/* Navigation Links */}
-      <ul className="flex flex-col gap-10 text-lg mt-10">
+      <ul className="flex flex-col gap-10 text-lg mt-10 ">
         {NAV_LINKS.map((link) => (
           <li key={link.name} className="flex items-center">
             <a
