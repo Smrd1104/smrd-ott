@@ -68,13 +68,13 @@ const HeroSlider: React.FC = () => {
               autoPlay
               loop
               muted
-              className="absolute top-0 left-0 w-full h-full object-cover z-0"
+              className="absolute top-0 left-0 w-full h-full  object-cover z-0"
             >
               <source src={slide.video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             {/* Content Overlay */}
-            <div className="relative text-left  translate-y-72 left-5 z-10 container mx-auto">
+            <div className="relative text-left  md:translate-y-72 md:top-0 top-96 translate-y-28 left-5 z-10 container mx-auto">
             <img
             src={logo}
             alt="Logo"
