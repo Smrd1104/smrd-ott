@@ -2,7 +2,7 @@
 
   const VideoCard = () => {
     return (
-      <div className="w-[250px] h-[280px] border rounded-lg  bg-black relative">
+      <div className="md:w-[250px] w-[350px] h-[280px] border rounded-lg  bg-black relative">
         <video
           autoPlay
           loop
