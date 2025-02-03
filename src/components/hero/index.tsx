@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'
 import { Pagination,Autoplay } from 'swiper/modules'; // Import Autoplay module
 import video1 from '../../assets/bg-3.mp4'
-import video2 from '../../assets/bg-2.mp4'
-import video3 from '../../assets/bg-1.mp4'
-import video4 from '../../assets/bg-4.mp4'
+import video2 from '../../assets/2bg.mp4'
+import video3 from '../../assets/bg.mp4'
+import video4 from '../../assets/4bg.mp4'
 import video5 from '../../assets/bg-5.mp4'
 import logo from '../../assets/logo-new.png'
 
