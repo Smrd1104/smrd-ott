@@ -4,7 +4,7 @@ import Movies from '../../components/movies/Movies'
 import Tv from '../..//components/tv/Tv'
 const index = () => {
   return (
-    <div className=''>
+    <div className='py-10'>
         <HeroSlider/>
         <Tv/>
         <Movies/>

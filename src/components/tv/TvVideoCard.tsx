@@ -1,4 +1,4 @@
-import football from '../../assets/football.mp4';
+import football from '../../assets/bg-5.mp4';
 
 const TvVideoCard = () => {
   return (

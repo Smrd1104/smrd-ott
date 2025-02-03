@@ -4,31 +4,31 @@ import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
 import "swiper/swiper-bundle.css";
 import { Navigation, Autoplay } from "swiper/modules";
 import TvCard from "./TvCard"; // Import your Card component
-import img1 from "../../assets/football.jpg";
-import img2 from "../../assets/archery.jpg";
-import img3 from "../../assets/tennis.jpg";
-import img4 from "../../assets/cricket.jpg";
-import img5 from "../../assets/baseball.jpg";
-import img6 from "../../assets/hockey.jpg";
-import img7 from "../../assets/golf.jpg";
-import img8 from "../../assets/volly.jpg";
+import img1 from "../../assets/wednesday.jpg";
+import img2 from "../../assets/you.jpg";
+import img3 from "../../assets/money-heist.jpg";
+import img4 from "../../assets/dexter.jpg";
+import img5 from "../../assets/elite.jpg";
+import img6 from "../../assets/the-boys.jpeg";
+import img7 from "../../assets/super-natural.jpg";
+import img8 from "../../assets/elite.jpg";
 
 const cards = [
-  { id: 1, title: "Football", image: img1 },
-  { id: 2, title: "Cricket", image: img4 },
-  { id: 3, title: "Tennis", image: img3 },
-  { id: 4, title: "Archery", image: img2 },
-  { id: 5, title: "Baseball", image: img5 },
-  { id: 6, title: "Hockey", image: img6 },
-  { id: 7, title: "Golf", image: img7 },
-  { id: 8, title: "Volleyball", image: img8 },
+  { id: 1, title: "Wednesday", image: img1 },
+  { id: 2, title: "Dexter", image: img4 },
+  { id: 3, title: "Money Heist", image: img3 },
+  { id: 4, title: "you", image: img2 },
+  { id: 5, title: "Elite", image: img5 },
+  { id: 6, title: "The Boys", image: img6 },
+  { id: 7, title: "Super Natural", image: img7 },
+  { id: 8, title: "Elite", image: img8 },
 ];
 
 const tvSlider = () => {
   return (
     <div id="tv" className="container mx-auto py-5 px-10 relative">
       <h1 className="md:text-[2.5rem] my-5 drop-shadow-header font-bold">
-        TV
+        Web-Series
       </h1>
 
       {/* Custom Navigation Buttons */}

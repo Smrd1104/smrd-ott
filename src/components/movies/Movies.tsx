@@ -5,23 +5,23 @@ import "swiper/swiper-bundle.css";
 import { Navigation, Autoplay } from "swiper/modules";
 import Card from "./Card"; // Import your Card component
 import img1 from "../../assets/maari.jpg";
-import img2 from "../../assets/the-boys.jpeg";
-import img3 from "../../assets/tennis.jpg";
-import img4 from "../../assets/cricket.jpg";
-import img5 from "../../assets/baseball.jpg";
-import img6 from "../../assets/hockey.jpg";
-import img7 from "../../assets/golf.jpg";
-import img8 from "../../assets/volly.jpg";
+import img2 from "../../assets/vettaiyan.jpg";
+import img3 from "../../assets/mangatha.jpg";
+import img4 from "../../assets/master.jpg";
+import img5 from "../../assets/goat.jpg";
+import img6 from "../../assets/mei.jpg";
+import img7 from "../../assets/rrr.jpg";
+import img8 from "../../assets/spider.png";
 
 const cards = [
-  { id: 1, title: "Football", image: img1 },
-  { id: 2, title: "Cricket", image: img2 },
-  { id: 3, title: "Tennis", image: img3 },
-  { id: 4, title: "Archery", image: img4 },
-  { id: 5, title: "Baseball", image: img5 },
-  { id: 6, title: "Hockey", image: img6 },
-  { id: 7, title: "Golf", image: img7 },
-  { id: 8, title: "Volleyball", image: img8 },
+  { id: 1, title: "Maari", image: img1 },
+  { id: 2, title: "Vettaiyan", image: img2 },
+  { id: 3, title: "Mangatha", image: img3 },
+  { id: 4, title: "Master", image: img4 },
+  { id: 5, title: "Leo", image: img5 },
+  { id: 6, title: "Mei Azhlagan", image: img6 },
+  { id: 7, title: "RRR", image: img7 },
+  { id: 8, title: "Spider", image: img8 },
 ];
 
 const movieSlider = () => {

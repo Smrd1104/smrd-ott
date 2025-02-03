@@ -19,7 +19,7 @@ const Card = ({ title, image }: CardProps) => {
       <img
         src={image}
         alt={title}
-        className="w-[250px] h-[280px] rounded-md border shadow-lg object-cover transition-opacity duration-300 group-hover:opacity-0" // Fade out on hover
+        className="w-[250px] h-[280px] rounded-md border shadow-lg object-fit transition-opacity duration-300 group-hover:opacity-0" // Fade out on hover
       />
 
       {/* Card Title */}
