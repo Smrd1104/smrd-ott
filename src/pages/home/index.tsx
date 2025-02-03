@@ -4,11 +4,13 @@ import Movies from '../../components/movies/Movies'
 import Tv from '../..//components/tv/Tv'
 const index = () => {
   return (
-    <div className='py-10'>
+    <div className=''>
         <HeroSlider/>
+        <div className='py-10'>
         <Tv/>
         <Movies/>
         <Sports/>
+        </div>
        
        
 
