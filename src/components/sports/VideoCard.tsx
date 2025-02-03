@@ -2,7 +2,7 @@
 
   const VideoCard = () => {
     return (
-      <div className="w-[250px] h-[280px] border rounded-lg  bg-black">
+      <div className="w-[250px] h-[280px] border rounded-lg  bg-black relative">
         <video
           autoPlay
           loop
@@ -12,7 +12,7 @@
           <source src={football} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute bottom-0 left-0 right-0 mx-2 flex flex-col gap-2 mt-2 pb-5">
+        <div className="absolute bottom-0 left-0 right-0 mx-4 flex flex-col gap-2 mt-2 pb-5">
           <div>
           <button className="border px-8 py-2 bg-white/10 rounded mt-1 text-white">
             Watch Now

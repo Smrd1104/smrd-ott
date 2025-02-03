@@ -3,7 +3,7 @@ import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
 
 import "swiper/swiper-bundle.css";
 import { Navigation, Autoplay } from "swiper/modules";
-import Card from "./Card"; // Import your Card component
+import TvCard from "./TvCard"; // Import your Card component
 import img1 from "../../assets/football.jpg";
 import img2 from "../../assets/archery.jpg";
 import img3 from "../../assets/tennis.jpg";
@@ -24,30 +24,30 @@ const cards = [
   { id: 8, title: "Volleyball", image: img8 },
 ];
 
-const sportsSlider = () => {
+const tvSlider = () => {
   return (
-    <div id="sports" className="container mx-auto py-5 px-10 relative">
+    <div id="tv" className="container mx-auto py-5 px-10 relative">
       <h1 className="md:text-[2.5rem] my-5 drop-shadow-header font-bold">
-        Sports
+        TV
       </h1>
 
       {/* Custom Navigation Buttons */}
       <IoIosArrowBack  
         className="absolute top-1/2 translate-y-6 text-[3rem] left-6 z-10 text-white p-3 bg-black/20 rounded-full transition cursor-pointer"
-        id="sport-prevSlide"
+        id="tv-prevSlide"
       />
       
       <IoIosArrowForward 
         className="absolute top-1/2 translate-y-6 text-[3rem] right-6 z-10 text-white p-3 bg-black/20 rounded-full transition cursor-pointer"
-        id="sport-nextSlide"
+        id="tv-nextSlide"
       />
 
       <Swiper
         modules={[Navigation, Autoplay]}
         spaceBetween={40}
         navigation={{
-          nextEl: "#sport-nextSlide",
-          prevEl: "#sport-prevSlide",
+          nextEl: "#tv-nextSlide",
+          prevEl: "#tv-prevSlide",
         }}
         // autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop={true}
@@ -60,8 +60,8 @@ const sportsSlider = () => {
       >
         {cards.map((card) => (
           <SwiperSlide key={card.id}>
-            <div className="hover:scale-105 duration-300 transition-all">
-              <Card title={card.title} image={card.image} />
+            <div className="hover:scale-105 duration-300 ">
+              <TvCard title={card.title} image={card.image} />
             </div>
           </SwiperSlide>
         ))}
@@ -70,4 +70,4 @@ const sportsSlider = () => {
   );
 };
 
-export default sportsSlider;
+export default tvSlider;
