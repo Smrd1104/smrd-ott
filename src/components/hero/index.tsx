@@ -84,20 +84,20 @@ const HeroSlider: React.FC = () => {
                 Your browser does not support the video tag.
               </video>
               {/* Content Overlay */}
-              <div className="relative text-left top-60 left-5 z-10 container mx-auto mt-5">
+              <div className="relative text-left top-48 left-5 z-10 container mx-auto mt-5">
                 <img
                   src={logo}
                   alt="Logo"
                   className="w-[90px] pb-2 h-auto transition-all duration-300"
                 />
-                <h1 className="text-4xl font-bold leading-8 ">{slide.title}</h1>
-                <h2 className="text-xl font-bold leading-8 mt-5">{slide.subtitle}</h2>
-                <p className="text-lg max-w-2xl text-gray-200 font-bold leading-8">
+                <h1 className="text-2xl font-bold leading-8 ">{slide.title}</h1>
+                <h2 className="text-[1rem] font-bold leading-8 mt-5">{slide.subtitle}</h2>
+                <p className="text-[1rem] max-w-2xl text-gray-300 font-bold leading-8 mt-5">
                   {slide.description}
                 </p>
-                <h2 className="text-md font-bold">{slide.subtitle2}</h2>
+                <h2 className="text-md font-bold text-[1rem] mt-5">{slide.subtitle2}</h2>
               </div>
-            <div className=" relative flex flex-row gap-5 container mx-auto top-0  ">
+            <div className=" relative flex flex-row gap-5 container -mt-10 mx-auto top-0  ">
               <button className="absolute cursor-pointer translate-y-66 left-5 flex flex-row items-center gap-2 border px-32 py-2  bg-white/10 rounded mt-1 text-white text-[1.2rem]">
                          <span><FaPlay/></span> Watch Now
               </button>
