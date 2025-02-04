@@ -22,7 +22,6 @@ import bgVideo5 from "../../assets/bg-4.mp4"
 import bgVideo6 from "../../assets/bg-5.mp4"
 import bgVideo7 from "../../assets/2bg.mp4"
 import bgVideo8 from "../../assets/4bg.mp4"
-import { BiRightArrow } from "react-icons/bi";
 
 
 
