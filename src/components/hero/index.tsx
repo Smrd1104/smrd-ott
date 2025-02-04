@@ -74,7 +74,7 @@ const HeroSlider: React.FC = () => {
               Your browser does not support the video tag.
             </video>
             {/* Content Overlay */}
-            <div className="relative text-left  md:translate-y-72 md:top-0 top-96 translate-y-8 left-5 z-10 container mx-auto">
+            <div className="relative text-left  md:translate-y-72 md:top-0 top-96 translate-y-2 left-5 z-10 container mx-auto">
             <img
             src={logo}
             alt="Logo"
