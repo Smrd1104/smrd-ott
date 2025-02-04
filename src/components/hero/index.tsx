@@ -1,15 +1,21 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css'
-import { Pagination,Autoplay } from 'swiper/modules'; // Import Autoplay module
-import video1 from '../../assets/bg-3.mp4'
-import video2 from '../../assets/2bg.mp4'
-import video3 from '../../assets/bg.mp4'
-import video4 from '../../assets/4bg.mp4'
-import video5 from '../../assets/bg-5.mp4'
-import logo from '../../assets/logo-new.png'
+import React, { useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import {Navigation, Thumbs } from "swiper/modules";
+import video1 from "../../assets/bg-3.mp4";
+import video2 from "../../assets/2bg.mp4";
+import video3 from "../../assets/bg.mp4";
+import video4 from "../../assets/4bg.mp4";
+import video5 from "../../assets/bg-5.mp4";
+import logo from "../../assets/logo-new.png";
+import { FaPlay } from "react-icons/fa";
+
+import { IoIosArrowBack, IoIosArrowForward, IoMdAdd } from "react-icons/io";
 
 const HeroSlider: React.FC = () => {
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+  const mainSwiperRef = useRef<any>(null);
+
   const slides = [
     {
       title: "SPRINGER-MAIN R",
@@ -17,79 +23,129 @@ const HeroSlider: React.FC = () => {
       subtitle2: "Comedy | Drama | Action | Romance",
       description:
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
-      video: video1, // Replace with your video URL
+      video: video1,
     },
     {
       title: "OST IN SPACE",
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
       subtitle2: "Comedy | Drama | Action | Romance",
-      description:"Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.", 
-      video: video2, // Replace with your video URL
+      description:
+        "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
+      video: video2,
     },
     {
       title: "OST IN SPACE",
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
       subtitle2: "Comedy | Drama | Action | Romance",
-      description: "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
-      video: video3, // Replace with your video URL
+      description:
+        "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
+      video: video3,
     },
     {
       title: "OST IN SPACE",
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
       subtitle2: "Comedy | Drama | Action | Romance",
-      description: "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
-      video: video4, // Replace with your video URL
+      description:
+        "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
+      video: video4,
     },
     {
       title: "OST IN SPACE",
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
       subtitle2: "Comedy | Drama | Action | Romance",
-      description: "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
-      video: video5, // Replace with your video URL
+      description:
+        "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
+      video: video5,
     },
-  
-    // Add more slides as needed
   ];
 
   return (
-    <Swiper
-      
-      pagination={{ clickable: true }}
-      modules={[Pagination,Autoplay]} // Add Autoplay module
-      className="w-full h-screen"
-      autoplay={{ delay: 3000, disableOnInteraction: false }} // Autoplay configuration
-      loop={true} // Enable infinite loop
-    >
-      {slides.map((slide, index) => (
-        <SwiperSlide key={index}>
-          <div className="w-full h-full flex flex-col text-white relative">
-            {/* Video Background */}
-            <video
-              autoPlay
-              loop
-              muted
-              className="absolute top-0 left-0 w-full h-full  object-cover z-0"
-            >
-              <source src={slide.video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            {/* Content Overlay */}
-            <div className="relative text-left  md:translate-y-72 md:top-0 top-96 translate-y-2 left-5 z-10 container mx-auto">
-            <img
-            src={logo}
-            alt="Logo"
-            className="object-cover w-[90px] h-auto transition-all  duration-300"
-          />
-              <h1 className="text-4xl  font-bold mb-4 font-bold mt-5">{slide.title}</h1>
-              <h2 className="text-xl mb-4  font-bold">{slide.subtitle}</h2>
-              <p className="text-lg max-w-2xl mb-4 text-gray-200  font-bold">{slide.description}</p>
-              <h2 className="text-md  mb-4  font-bold">{slide.subtitle2}</h2>
-
-            </div>
+    <div className="w-full h-screen relative">
+      {/* Main Swiper */}
+      <Swiper
+        ref={mainSwiperRef}
+        pagination={{ clickable: false }}
+        modules={[Navigation, Thumbs]}
+        loop={true}
+        thumbs={{ swiper: thumbsSwiper }}
+        className="w-full h-screen"
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="w-full h-full flex flex-col text-white relative">
+              {/* Video Background */}
+              <video
+                autoPlay
+                loop
+                muted
+                className="absolute top-0 left-0 w-full h-full object-cover z-0"
+              >
+                <source src={slide.video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              {/* Content Overlay */}
+              <div className="relative text-left top-60 left-5 z-10 container mx-auto mt-5">
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className="w-[90px] pb-2 h-auto transition-all duration-300"
+                />
+                <h1 className="text-4xl font-bold leading-8 ">{slide.title}</h1>
+                <h2 className="text-xl font-bold leading-8 mt-5">{slide.subtitle}</h2>
+                <p className="text-lg max-w-2xl text-gray-200 font-bold leading-8">
+                  {slide.description}
+                </p>
+                <h2 className="text-md font-bold">{slide.subtitle2}</h2>
+              </div>
+            <div className=" relative flex flex-row gap-5 container mx-auto top-0  ">
+              <button className="absolute cursor-pointer translate-y-66 left-5 flex flex-row items-center gap-2 border px-32 py-2  bg-white/10 rounded mt-1 text-white text-[1.2rem]">
+                         <span><FaPlay/></span> Watch Now
+              </button>
+              <div className="">
+              <IoMdAdd className=" absolute border py-2 text-[2.8rem]  translate-y-66 translate-x-96 left-8   mt-1 rounded   bg-white/10"/>
+              </div>
+             </div>
           </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      {/* Thumbnail Swiper */}
+        <div className="relative  container mx-auto fixed">
+           {/* Custom Navigation Buttons */}
+        <IoIosArrowBack
+              className="absolute top-1/2 -translate-y-26 text-[3rem] md:right-91 z-10 text-white p-3   rounded-full transition cursor-pointer"
+              id="prevSlide"
+            />
+      
+            <IoIosArrowForward
+              className="absolute top-1/2 -translate-y-26 text-[3rem] md:right-10 z-10 text-white p-3   rounded-full transition cursor-pointer"
+              id="nextSlide"
+            />
+      <Swiper
+        onSwiper={setThumbsSwiper}
+        spaceBetween={10}
+        slidesPerView={3}
+        freeMode={true}
+        watchSlidesProgress={true}
+        modules={[Thumbs,Navigation]}
+        navigation={{
+          nextEl: "#nextSlide",
+          prevEl: "#prevSlide",
+        }}
+        className="absolute bottom-5  left-1/2 -top-20 transform -translate-x-3/4 w-1/4 z-10  "
+      >
+       
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index} onClick={() => mainSwiperRef.current.swiper.slideTo(index)}>
+            <video className="w-full  h-16 object-cover rounded cursor-pointer" muted>
+              <source src={slide.video} type="video/mp4" />
+            </video>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      </div>
+    </div>
   );
 };
 

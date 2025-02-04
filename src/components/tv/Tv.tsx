@@ -90,7 +90,7 @@ const cardData = [
 
 const MovieSlider = () => {
   return (
-    <div id="movies" className="container mx-auto py-5 px-10 relative">
+    <div id="tv" className="container mx-auto py-5 px-10 relative">
       <h1 className="md:text-[2.5rem] text-[2rem] my-5 drop-shadow-header font-bold">
         Web-Series
       </h1>
