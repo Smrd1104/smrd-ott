@@ -41,7 +41,7 @@ const VideoCard = ({ videoSrc, title, year, description }: VideoCardProps) => {
 
       <div className="absolute bottom-0 left-0 right-0 flex flex-col gap-1 mt-2 pb-10 bg-white/10">
       <div className="mx-4 flex flex-row items-center gap-3 ">
-                                 <button className=" flex flex-row items-center gap-2 cursor-pointer border px-9 py-2 bg-white/10 rounded mt-1 text-white text-sm hover:scale-105 duration-300">
+                                 <button className=" flex flex-row items-center gap-2 cursor-pointer border px-9 py-2 bg-gray-100 rounded mt-1 text-black text-sm hover:scale-105 duration-300">
                                  <span><FaPlay/></span>  Watch Now
                                  </button>
                                  <IoMdAdd className=" border py-2 text-[2.25rem] rounded mt-1 cursor-pointer  bg-white/10 hover:scale-105 duration-300"/>

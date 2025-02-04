@@ -138,7 +138,7 @@ const HeroSlider: React.FC = () => {
        
         {slides.map((slide, index) => (
           <SwiperSlide key={index} onClick={() => mainSwiperRef.current.swiper.slideTo(index)}>
-            <video className="w-full  h-16 object-cover rounded cursor-pointer" muted>
+            <video className="w-full  h-16 object-cover rounded cursor-pointer duration-300 hover:scale-120" muted>
               <source src={slide.video} type="video/mp4" />
             </video>
           </SwiperSlide>
