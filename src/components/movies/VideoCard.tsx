@@ -15,7 +15,7 @@ const VideoCard = () => {
   };
 
   return (
-    <div className="md:w-[250px] w-[350px] h-[280px] bg-black relative">
+    <div className="md:w-[250px] w-[350px] h-[280px] bg-black relative ">
       <video
         autoPlay
         ref={videoRef}
@@ -27,15 +27,15 @@ const VideoCard = () => {
       </video>
 
       {/* Custom volume control */}
-      <div className="absolute -translate-y-9 right-1 flex items-center gap-2">
-        <button onClick={toggleMute} className="text-white">
+      <div className="absolute md:top-27 top-4  md:left-56 left-4 flex items-center gap-2">
+        <button onClick={toggleMute} className="text-white cursor-pointer">
           {isMuted ? <FaVolumeMute size={15} /> : <FaVolumeUp size={15} />}
         </button>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 flex flex-col gap-1 mt-2 pb-6 bg-white/10">
         <div className="mx-4">
-          <button className="border px-5 py-2 bg-white/10 rounded mt-1 text-white text-sm">
+          <button className="cursor-pointer border px-5 py-2 bg-white/10 rounded mt-1 text-white text-sm">
             Watch Now
           </button>
         </div>
