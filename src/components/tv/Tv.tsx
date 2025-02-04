@@ -29,7 +29,7 @@ import bgVideo8 from "../../assets/4bg.mp4"
 const cardData = [
   {
     id: 1,
-    title: "wednesday",
+    title: "Wednesday",
     image: img1,
     videoSrc: bgVideo1,
     year: "2025 . U/A 2025 . 1 Season",
