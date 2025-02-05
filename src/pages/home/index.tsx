@@ -6,7 +6,7 @@ const index = () => {
   return (
     <div className=''>
         <HeroSlider/>
-        <div className='py-10'>
+        <div className=''>
         <Tv/>
         <Movies/>
         <Sports/>
