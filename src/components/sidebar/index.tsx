@@ -45,7 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({ setIsExpanded }) => {
       ref={sidebarRef}
       onMouseEnter={() => setIsExpanded(true)} // Expand on hover
       onMouseLeave={() => setIsExpanded(false)} // Collapse on hover out
-      className="hidden lg:block fixed top-0 -translate-x-2 left-0 h-full bg-black/10 text-white p-6 transition-all duration-300"
+      className="hidden lg:block fixed top-0 -translate-x-2 left-0 h-full bg-black/10  text-white p-6 transition-all duration-300"
     >
       {/* Logo */}
       <a href="/">

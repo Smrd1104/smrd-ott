@@ -33,7 +33,7 @@ const VideoCard = ({ videoSrc, title, year, description }: VideoCardProps) => {
       </video>
 
       {/* Custom volume control */}
-      <div className="absolute md:top-5 top-4 md:left-65 left-4 flex items-center gap-2">
+      <div className="absolute md:top-2 top-4 md:left-65 left-4 flex items-center gap-2">
         <button onClick={toggleMute} className="text-white cursor-pointer">
           {isMuted ? <FaVolumeMute size={15} /> : <FaVolumeUp size={15} />}
         </button>
