@@ -10,7 +10,6 @@ import video5 from "../../assets/bg-5.mp4";
 import video6 from "../../assets/bg-3.mp4";
 
 import logo from "../../assets/viddamuyarchi-removebg.png";
-import logo2 from "../../assets/logo.jpg" 
 import { FaPlay, FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward, IoMdAdd } from "react-icons/io";
 
