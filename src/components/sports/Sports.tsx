@@ -94,7 +94,7 @@ const MovieSlider = () => {
       <h1 className="md:text-[2.5rem] text-[2rem] my-5 drop-shadow-header font-bold">
        Sports
       </h1>
-      <div className="flex flex-row gap-2 text-gray-500 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center">
+      <div className="flex flex-row gap-2 text-gray-200 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center">
         <h3 className="md:text-[1rem] text-[1rem] my-5 font-md">View All</h3>
         <span className="text-[1rem]">
           <IoIosArrowForward />
@@ -103,11 +103,11 @@ const MovieSlider = () => {
     </div>
     <IoIosArrowBack
       className="absolute top-1/2 translate-y-6 text-[3rem] left-6 z-10 text-white p-3 bg-black/20 rounded-full transition cursor-pointer"
-      id="tv-prevSlide"
+      id="sport-prevSlide"
     />
     <IoIosArrowForward
       className="absolute top-1/2 translate-y-6 text-[3rem] right-6 z-10 text-white p-3 bg-black/20 rounded-full transition cursor-pointer"
-      id="tv-nextSlide"
+      id="sport-nextSlide"
     />
     <Swiper
 modules={[Navigation, Autoplay, EffectCoverflow]}
@@ -124,8 +124,8 @@ coverflowEffect={{
   slideShadows: false,
 }}
 navigation={{
-  nextEl: "#tv-nextSlide",
-  prevEl: "#tv-prevSlide",
+  nextEl: "#sport-nextSlide",
+  prevEl: "#sport-prevSlide",
 }}
 loop={true}
 >

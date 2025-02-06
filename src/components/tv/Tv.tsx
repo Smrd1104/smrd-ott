@@ -136,7 +136,7 @@ const MovieSlider = () => {
         <h1 className="md:text-[2.5rem] text-[2rem] my-5 drop-shadow-header font-bold">
           Web-Series
         </h1>
-        <div className="flex flex-row gap-2 text-gray-500 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center">
+        <div className="flex flex-row gap-2 text-gray-200 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center">
           <h3 className="md:text-[1rem] text-[1rem] my-5 font-md">View All</h3>
           <span className="text-[1rem]">
             <IoIosArrowForward />
