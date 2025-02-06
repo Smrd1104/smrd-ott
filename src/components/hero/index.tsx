@@ -5,20 +5,20 @@ import { Navigation, Thumbs } from "swiper/modules";
 import video1 from "../../assets/Vidaamuyarchi.mp4";
 import video2 from "../../assets/goat.mp4";
 import video3 from "../../assets/Vettaiyan.mp4";
-import video4 from "../../assets/4bg.mp4";
-import video5 from "../../assets/bg-5.mp4";
-import video6 from "../../assets/bg-3.mp4";
+import video4 from "../../assets/raayan.mp4";
+import video5 from "../../assets/meiyazhagan.mp4";
+import video6 from "../../assets/vikram.mp4";
 
 import logo from "../../assets/viddamuyarchi.png";
 import logo2 from "../../assets/goat.png";
 import logo3 from "../../assets/vettaiyan.png";
 
-import logo11 from "../../assets/viddamuyarchi.jpg";
+import logo11 from "../../assets/vidaamuyarchi.webp";
 import logo12 from "../../assets/goat.jpg";
 import logo13 from "../../assets/vettaiyan.jpg";
-import logo14 from "../../assets/goat.jpg";
-import logo15 from "../../assets/viddamuyarchi.jpg";
-import logo16 from "../../assets/vettaiyan.jpg";
+import logo14 from "../../assets/maari.jpg";
+import logo15 from "../../assets/mei.jpg";
+import logo16 from "../../assets/vikram.jpg";
 
 
 
