@@ -126,7 +126,7 @@ const HeroSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-full h-auto relative">
       {/* Main Swiper */}
       <Swiper
         ref={mainSwiperRef}
@@ -152,7 +152,7 @@ const HeroSlider: React.FC = () => {
               </video>
 
               {/* Custom volume control */}
-              <div className="absolute right-16  rounded-full py-1 px-2 bottom-40  flex items-center gap-2">
+              <div className="absolute right-2 rounded-full py-1 px-2 bottom-5   flex items-center gap-2">
                 <button onClick={() => toggleMute(index)} className="text-white cursor-pointer">
                   {isMuted[index] ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
                 </button>

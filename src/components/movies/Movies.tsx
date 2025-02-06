@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import "swiper/swiper-bundle.css";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay,EffectCoverflow} from "swiper/modules";
 import Card from "./Card"; // Import your Card component
 // images
 import img1 from "../../assets/maari.jpg";
@@ -89,47 +89,50 @@ const cardData = [
 
 const MovieSlider = () => {
   return (
-    <div id="movies" className="container mx-auto py-5 px-10 relative">
+    <div id="movies" className="container mx-auto py-5 px-5 relative">
       <div className="flex flex-row justify-between items-center">
-      <h1 className="md:text-[2.5rem] text-[2rem] my-5 drop-shadow-header font-bold">
-        Movies
-      </h1>
-      <div className="flex flex-row gap-2 text-gray-500 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center">
-      <h3 className="md:text-[1rem] text-[1rem] my-5  font-md">View All
-      </h3>
-      <span className="text-[1rem]"><IoIosArrowForward/></span>
+        <h1 className="md:text-[2.5rem] text-[2rem] my-5 drop-shadow-header font-bold">
+          Movies
+        </h1>
+        <div className="flex flex-row gap-2 text-gray-500 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center">
+          <h3 className="md:text-[1rem] text-[1rem] my-5 font-md">View All</h3>
+          <span className="text-[1rem]">
+            <IoIosArrowForward />
+          </span>
+        </div>
       </div>
-      </div>
-
-      {/* Custom Navigation Buttons */}
       <IoIosArrowBack
         className="absolute top-1/2 translate-y-6 text-[3rem] left-6 z-10 text-white p-3 bg-black/20 rounded-full transition cursor-pointer"
-        id="movie-prevSlide"
+        id="tv-prevSlide"
       />
-
       <IoIosArrowForward
         className="absolute top-1/2 translate-y-6 text-[3rem] right-6 z-10 text-white p-3 bg-black/20 rounded-full transition cursor-pointer"
-        id="movie-nextSlide"
+        id="tv-nextSlide"
       />
-
       <Swiper
-        modules={[Navigation, Autoplay]}
-        spaceBetween={40}
-        navigation={{
-          nextEl: "#movie-nextSlide",
-          prevEl: "#movie-prevSlide",
-        }}
-        loop={true}
-        breakpoints={{
-          320: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
-        }}
-      >
+  modules={[Navigation, Autoplay, EffectCoverflow]}
+  effect="coverflow"
+  grabCursor={false}
+  centeredSlides={true}
+  slidesPerView={5}  // Show 5 slides at a time
+  spaceBetween={10}  // Reduce gap between slides
+  coverflowEffect={{
+    rotate: 20,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  }}
+  navigation={{
+    nextEl: "#tv-nextSlide",
+    prevEl: "#tv-prevSlide",
+  }}
+  loop={true}
+>
+
         {cardData.map((item) => (
-          <SwiperSlide key={item.id}>
-            <div className="hover:scale-105 duration-300 transition-all">
+          <SwiperSlide key={item.id} className="w-[250px]">
+            <div className="hover:scale-105 duration-300 transition-all py-10">
               <Card
                 title={item.title}
                 image={item.image}

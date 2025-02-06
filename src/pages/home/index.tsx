@@ -6,7 +6,7 @@ const index = () => {
   return (
     <div className=''>
         <HeroSlider/>
-        <div className=''>
+        <div className='px-2'>
         <Tv/>
         <Movies/>
         <Sports/>
