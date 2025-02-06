@@ -152,32 +152,34 @@ const HeroSlider: React.FC = () => {
               </video>
 
               {/* Custom volume control */}
-              <div className="absolute right-20 bottom-23 flex items-center gap-2">
+              <div className="absolute right-16  rounded-full py-1 px-2 bottom-40  flex items-center gap-2">
                 <button onClick={() => toggleMute(index)} className="text-white cursor-pointer">
                   {isMuted[index] ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
                 </button>
               </div>
 
               {/* Content Overlay */}
-              <div className="relative text-left top-86 left-5 z-10 container mx-auto ">
+              <div className="relative text-left top-78 left-5 z-10 container mx-auto ">
                 <img src={slide.logo} alt="Logo" className="w-[150px]  h-auto transition-all duration-300" />
                 {/* <h1 className="text-2xl font-bold leading-8 uppercase ">{slide.title}</h1> */}
                 <h2 className="text-[1rem] font-bold leading-8 mt-2">{slide.subtitle}</h2>
                 {/* <p className="text-[1rem] max-w-2xl text-gray-300 font-bold leading-8 mt-5">{slide.description}</p> */}
                 <h2 className="text-md font-bold text-[1rem] mt-5">{slide.subtitle2}</h2>
-              </div>
-
-              <div className="relative flex flex-row gap-5 container mt-24 mx-auto top-0">
-                <button className="backdrop-blur-md hover:scale-105 duration-300 absolute cursor-pointer translate-y-66 left-5 flex flex-row items-center gap-2 px-32 py-2 bg-white/10 rounded-lg mt-1 text-white text-[1.2rem]">
+                <div className="absolute flex flex-row gap-5 container mx-auto top-0 mt-5">
+                <button className=" hover:scale-105 hover:border duration-300 absolute cursor-pointer top-40 flex flex-row items-center gap-2 px-32 py-2 bg-white/10 rounded-lg mt-1 text-white text-[1.2rem]">
                   <span>
                     <FaPlay />
                   </span>
                   Watch Now
                 </button>
                 <div>
-                  <IoMdAdd className="backdrop-blur-md absolute hover:scale-105 duration-300 py-2 text-[2.8rem] translate-y-66 translate-x-96 left-8 mt-1 rounded-lg bg-white/10" />
+                  <IoMdAdd className=" absolute  hover:border  hover:scale-105 duration-300 py-2 text-[2.8rem]  top-41 left-96 translate-x-3 rounded-lg bg-white/10" />
                 </div>
               </div>
+              </div>
+
+
+             
             </div>
           </SwiperSlide>
         ))}
@@ -187,12 +189,12 @@ const HeroSlider: React.FC = () => {
       <div className="relative container mx-auto fixed">
         {/* Custom Navigation Buttons */}
         <IoIosArrowBack
-          className="absolute top-1/2 -translate-y-26 text-[3rem] md:right-91 z-10 text-white p-3 rounded-full transition cursor-pointer"
+          className="absolute top-1/2 -translate-y-44 text-[3rem] md:right-91 z-10 text-white p-3 rounded-full transition cursor-pointer"
           id="prevSlide"
         />
 
         <IoIosArrowForward
-          className="absolute top-1/2 -translate-y-26 text-[3rem] md:right-10 z-10 text-white p-3 rounded-full transition cursor-pointer"
+          className="absolute top-1/2 -translate-y-44 text-[3rem] md:right-10 z-10 text-white p-3 rounded-full transition cursor-pointer"
           id="nextSlide"
         />
 
@@ -207,11 +209,11 @@ const HeroSlider: React.FC = () => {
             nextEl: "#nextSlide",
             prevEl: "#prevSlide",
           }}
-          className="absolute bottom-5 left-1/2 -top-20 transform -translate-x-3/4 w-1/4 z-10"
+          className="absolute  left-1/2 -translate-y-38 transform -translate-x-3/4 w-1/4 z-10"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index} onClick={() => mainSwiperRef.current.swiper.slideTo(index)}>
-              <img src={slide.thumb} alt="Logo" className="hover:scale-105 w-[150px]  h-[80px]  transition-all duration-300" />
+              <img src={slide.thumb} alt="Logo" className="hover:scale-105  duration-300  w-[100px] h-[70px] rounded  transition-all duration-300" />
             </SwiperSlide>
           ))}
         </Swiper>
