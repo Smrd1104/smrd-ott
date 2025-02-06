@@ -89,7 +89,7 @@ const cardData = [
 
 const MovieSlider = () => {
   return (
-    <div id="sports" className="container mx-auto py-5 px-5 relative">
+    <div id="sports" className="container mx-auto p-2 relative">
     <div className="flex flex-row justify-between items-center">
       <h1 className="md:text-[2.5rem] text-[2rem] my-5 drop-shadow-header font-bold">
        Sports
