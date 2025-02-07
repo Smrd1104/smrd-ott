@@ -2,7 +2,6 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "../src/components/sidebar";
 import Home from "../src/pages/home";
-import Movie from "../src/pages/movie";
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(false);
