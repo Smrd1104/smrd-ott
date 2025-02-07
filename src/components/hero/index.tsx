@@ -145,35 +145,35 @@ const HeroSlider: React.FC = () => {
                 autoPlay
                 loop
                 muted={isMuted[index]}
-                className="absolute top-0 left-0 w-full h-full object-cover z-0"
+                className="absolute top-0 left-0 md:w-full md:h-full h-[700px] object-cover z-0"
               >
                 <source src={slide.video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
               {/* Custom volume control */}
-              <div className="absolute right-2 rounded-full py-1 px-2 bottom-5   flex items-center gap-2">
+              <div className="absolute right-2 rounded-full py-1 px-2 md:bottom-5 bottom-86   flex items-center gap-2">
                 <button onClick={() => toggleMute(index)} className="text-white cursor-pointer">
                   {isMuted[index] ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
                 </button>
               </div>
 
               {/* Content Overlay */}
-              <div className="relative text-left top-78 left-5 z-10 container mx-auto ">
+              <div className="relative text-left md:top-78 top-92 left-5 z-10 container mx-auto ">
                 <img src={slide.logo} alt="Logo" className="w-[150px]  h-auto transition-all duration-300" />
                 {/* <h1 className="text-2xl font-bold leading-8 uppercase ">{slide.title}</h1> */}
                 <h2 className="text-[1rem] font-bold leading-8 mt-2">{slide.subtitle}</h2>
                 {/* <p className="text-[1rem] max-w-2xl text-gray-300 font-bold leading-8 mt-5">{slide.description}</p> */}
                 <h2 className="text-md font-bold text-[1rem] mt-5">{slide.subtitle2}</h2>
                 <div className="absolute flex flex-row gap-5 container mx-auto top-0 mt-5">
-                <button className=" hover:scale-105 hover:border duration-300 absolute cursor-pointer top-40 flex flex-row items-center gap-2 px-32 py-2 bg-white/10 rounded-lg mt-1 text-white text-[1.2rem]">
+                <button className=" hover:scale-105 hover:border duration-300 absolute cursor-pointer top-40 flex flex-row items-center gap-2 md:px-32 px-10 py-2 bg-white/10 rounded-lg mt-1 text-white text-[1.2rem]">
                   <span>
                     <FaPlay />
                   </span>
                   Watch Now
                 </button>
                 <div>
-                  <IoMdAdd className=" absolute  hover:border  hover:scale-105 duration-300 py-2 text-[2.8rem]  top-41 left-96 translate-x-3 rounded-lg bg-white/10" />
+                  <IoMdAdd className=" absolute  hover:border  hover:scale-105 duration-300 py-2 text-[2.8rem]  top-41 md:left-96 left-54 md:translate-x-3 rounded-lg bg-white/10" />
                 </div>
               </div>
               </div>
@@ -186,15 +186,15 @@ const HeroSlider: React.FC = () => {
       </Swiper>
 
       {/* Thumbnail Swiper */}
-      <div className="relative container mx-auto fixed">
+      <div className="lg:block hidden relative container mx-auto fixed">
         {/* Custom Navigation Buttons */}
         <IoIosArrowBack
-          className="absolute top-1/2 -translate-y-44 text-[3rem] md:right-91 z-10 text-white p-3 rounded-full transition cursor-pointer"
+          className="absolute top-1/2 -translate-y-44 text-[3rem] md:right-91 right-32 z-10 text-white p-3 rounded-full transition cursor-pointer"
           id="prevSlide"
         />
 
         <IoIosArrowForward
-          className="absolute top-1/2 -translate-y-44 text-[3rem] md:right-10 z-10 text-white p-3 rounded-full transition cursor-pointer"
+          className="absolute top-1/2 -translate-y-44 text-[3rem] md:right-10 -right-2 z-10 text-white p-3 rounded-full transition cursor-pointer"
           id="nextSlide"
         />
 
@@ -209,11 +209,11 @@ const HeroSlider: React.FC = () => {
             nextEl: "#nextSlide",
             prevEl: "#prevSlide",
           }}
-          className="absolute  left-1/2 -translate-y-38 transform -translate-x-3/4 w-1/4 z-10"
+          className="absolute  left-1/2 md:-translate-y-38 -translate-y-84 transform -translate-x-3/4 w-1/4 z-10"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index} onClick={() => mainSwiperRef.current.swiper.slideTo(index)}>
-              <img src={slide.thumb} alt="Logo" className="hover:scale-105  duration-300  w-[100px] h-[70px] rounded  transition-all duration-300" />
+              <img src={slide.thumb} alt="Logo" className="hover:scale-105  duration-300  md:w-[100px] md:h-[70px]  rounded  transition-all duration-300" />
             </SwiperSlide>
           ))}
         </Swiper>

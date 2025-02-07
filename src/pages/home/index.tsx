@@ -10,6 +10,7 @@ const index = () => {
         <Tv/>
         <Movies/>
         <Sports/>
+        
         </div>
        
        
