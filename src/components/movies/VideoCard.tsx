@@ -21,7 +21,7 @@ const VideoCard = ({ videoSrc, title, year, description }: VideoCardProps) => {
   };
 
   return (
-    <div className="md:w-[280px] translate-x-6 w-[350px] h-[320px] bg-black relative ">
+    <div className="lg:block hidden md:w-[280px] md:translate-x-6 md:w-[280px] w-[200px] md:h-[320px] h-[250px]  bg-black relative">
       <video
         autoPlay
         ref={videoRef}

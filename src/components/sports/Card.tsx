@@ -26,11 +26,11 @@ const Card = ({ title, image, videoSrc, year, description }: CardProps) => {
       <img
         src={image}
         alt={title}
-        className="md:w-[250px] w-[350px] h-[280px] rounded-md border shadow-lg object-fit transition-opacity duration-300 group-hover:opacity-0"
+        className="md:w-[250px] w-[200px] md:h-[280px] h-[150px]  rounded-md border shadow-lg object-fit transition-opacity duration-300 group-hover:opacity-0"
       />
-      <div className="absolute bottom-3 left-3 bg-black/50 text-white p-2 drop-shadow rounded-md text-sm">
+      {/* <div className="absolute bottom-3 left-3 bg-black/50 text-white p-2 drop-shadow rounded-md text-sm">
         {title}
-      </div>
+      </div> */}
       {isHovered && (
         <div className="absolute -inset-6 -translate-x-10 z-50 transition-all duration-300 transform scale-105 group-hover:scale-105">
           <VideoCard videoSrc={videoSrc} title={title} year={year} description={description} />
