@@ -145,35 +145,35 @@ const HeroSlider: React.FC = () => {
                 autoPlay
                 loop
                 muted={isMuted[index]}
-                className="absolute top-0 left-0 md:w-full md:h-full h-[700px] object-cover z-0"
+                className="absolute top-0 left-0 md:w-full md:h-full h-[480px] object-cover z-0"
               >
                 <source src={slide.video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
               {/* Custom volume control */}
-              <div className="absolute right-2 rounded-full py-1 px-2 md:bottom-5 bottom-86   flex items-center gap-2">
+              <div className="absolute right-2 rounded-full py-1 px-2 md:bottom-5 bottom-106   flex items-center gap-2">
                 <button onClick={() => toggleMute(index)} className="text-white cursor-pointer">
                   {isMuted[index] ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
                 </button>
               </div>
 
               {/* Content Overlay */}
-              <div className="relative text-left md:top-78 top-92 left-5 z-10 container mx-auto ">
-                <img src={slide.logo} alt="Logo" className="w-[150px]  h-auto transition-all duration-300" />
+              <div className="relative text-left md:top-78 top-64 left-5 z-10 container mx-auto ">
+                <img src={slide.logo} alt="Logo" className="md:w-[150px] w-[100px]  h-auto transition-all duration-300" />
                 {/* <h1 className="text-2xl font-bold leading-8 uppercase ">{slide.title}</h1> */}
-                <h2 className="text-[1rem] font-bold leading-8 mt-2">{slide.subtitle}</h2>
+                <h2 className="md:text-[1rem] text-[0.8rem] font-bold leading-8 md:mt-2">{slide.subtitle}</h2>
                 {/* <p className="text-[1rem] max-w-2xl text-gray-300 font-bold leading-8 mt-5">{slide.description}</p> */}
-                <h2 className="text-md font-bold text-[1rem] mt-5">{slide.subtitle2}</h2>
-                <div className="absolute flex flex-row gap-5 container mx-auto top-0 mt-5">
-                <button className=" hover:scale-105 hover:border duration-300 absolute cursor-pointer top-40 flex flex-row items-center gap-2 md:px-32 px-10 py-2 bg-white/10 rounded-lg mt-1 text-white text-[1.2rem]">
+                <h2 className=" font-bold md:text-[1rem] text-[0.8rem] md:mt-5">{slide.subtitle2}</h2>
+                <div className="absolute flex flex-row gap-5 container mx-auto top-0 md:mt-5">
+                <button className=" hover:scale-105 hover:border duration-300 absolute cursor-pointer md:top-40 top-28 flex flex-row items-center gap-2 md:px-32 px-10 py-2 bg-white/10 rounded-lg mt-1 text-white text-[1.2rem]">
                   <span>
                     <FaPlay />
                   </span>
                   Watch Now
                 </button>
                 <div>
-                  <IoMdAdd className=" absolute  hover:border  hover:scale-105 duration-300 py-2 text-[2.8rem]  top-41 md:left-96 left-54 md:translate-x-3 rounded-lg bg-white/10" />
+                  <IoMdAdd className=" absolute  hover:border  hover:scale-105 duration-300 py-2 text-[2.8rem]  md:top-41 top-29 md:left-96 left-54 md:translate-x-3 rounded-lg bg-white/10" />
                 </div>
               </div>
               </div>

@@ -6,7 +6,7 @@ const index = () => {
   return (
     <div className=''>
         <HeroSlider/>
-        <div className='md:-mt-14 -mt-56'>
+        <div className='md:-mt-14 -mt-96'>
         <Tv/>
         <Movies/>
         <Sports/>
