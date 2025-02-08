@@ -1,10 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "../src/components/sidebar";
 import Home from "../src/pages/home";
+import LoadingSpinner from "./components/loader/Loader"; // Import your loader
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [loading, setLoading] = useState(() => {
+    return sessionStorage.getItem("appLoaded") ? false : true;
+  });
+
+  useEffect(() => {
+    if (!sessionStorage.getItem("appLoaded")) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+        sessionStorage.setItem("appLoaded", "true");
+      }, 10000); // 3 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  if (loading) {
+    return (
+      <div className=" flex items-center justify-center min-h-screen bg-gradient-to-r from-[#000] to-[#000] text-white">
+        <LoadingSpinner />
+      </div>
+    );
+  }
 
   return (
     <Router>
