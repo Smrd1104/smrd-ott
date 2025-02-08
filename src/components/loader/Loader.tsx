@@ -1,11 +1,11 @@
 import React from "react";
-
+import loader from "../../assets/logo-new.png"
 const LoadingSpinner: React.FC = () => {
   return (
     <div className="flex flex-col gap-4 w-full items-center justify-center relative">
       {/* Logo Image */}
       <img 
-        src="src/assets/logo-new.png" // Ensure the correct path
+        src={loader}// Ensure the correct path
         alt="Loading..."
         className="w-28 h-28  z-50 absolute"
       />
