@@ -22,8 +22,13 @@ import bgVideo6 from "../../assets/bg-5.mp4";
 import bgVideo7 from "../../assets/2bg.mp4";
 import bgVideo8 from "../../assets/4bg.mp4";
 import Card from "./TvCard";
+import { useState } from "react";
 
 const MovieSlider = () => {
+  const [isPrevActive, setIsPrevActive] = useState(false);
+  const [isNextActive, setIsNextActive] = useState(true); // Initially, next is active
+  
+  
   const cardData = [
     {
       id: 1,
@@ -144,11 +149,15 @@ const MovieSlider = () => {
         </div>
       </div>
       <IoIosArrowBack
-        className="absolute top-1/2 translate-y-6 text-[3rem] left-6 z-10 text-white p-3 bg-black/20 rounded-full transition cursor-pointer"
+        className={`absolute top-1/2 translate-y-6 text-[3rem] left-6 z-10  p-3 bg-black/20 rounded-full transition cursor-pointer  ${
+          isPrevActive ? "text-white" : "text-gray-500 hidden"
+        }`}
         id="tv-prevSlide"
       />
       <IoIosArrowForward
-        className="absolute top-1/2 translate-y-6 text-[3rem] right-6 z-10 text-white p-3 bg-black/20 rounded-full transition cursor-pointer"
+        className={`absolute top-1/2 translate-y-6 text-[3rem] right-6 z-10  p-3 bg-black/20 rounded-full transition cursor-pointer  ${
+          isNextActive ? "text-white" : "text-gray-500 hidden"
+        }`}
         id="tv-nextSlide"
       />
       <Swiper
@@ -168,6 +177,10 @@ const MovieSlider = () => {
   navigation={{
     nextEl: "#tv-nextSlide",
     prevEl: "#tv-prevSlide",
+  }}
+  onSlideChange={(swiper) => {
+    setIsPrevActive(swiper.activeIndex > 0); // Change color when moving left
+    setIsNextActive(swiper.activeIndex < swiper.slides.length - 4); // Change color when moving right
   }}
   loop={true}
 >

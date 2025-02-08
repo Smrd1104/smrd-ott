@@ -10,6 +10,14 @@ const index = () => {
         <Tv/>
         <Movies/>
         <Sports/>
+        {/* <div className='flex flex-row gap-2 px-10 py-10 '>
+        <FlipCard/>
+        <FlipCard/>
+         <FlipCard/> 
+         <FlipCard/> 
+         <FlipCard/> 
+         
+        </div> */}
         
         </div>
        

@@ -1,7 +1,7 @@
 .card {
-    perspective: 1000px; /* Depth of the 3D space */
-    width: 250px; /* Adjust width as needed */
-    height: 350px; /* Adjust height as needed */
+    perspective: 100px;
+    width: 100px;
+    height: 150px;
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -10,8 +10,8 @@
   }
   
   .card:hover {
-    transform: scale(1.2); /* Scaling the card on hover */
-    z-index: 90; /* Ensures the card appears on top when hovered */
+    transform: scale(1.4); /* Scale effect when hovering */
+    z-index: 90; /* Ensure the card appears on top when hovered */
   }
   
   .card-content {
@@ -19,7 +19,6 @@
     height: 100%;
     position: relative;
     transition: transform 0.3s ease-in-out;
-    transform-style: preserve-3d; /* Needed for 3D effects */
   }
   
   .card-front,
@@ -27,7 +26,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    backface-visibility: hidden; /* Hide the back face when flipped */
+    backface-visibility: hidden;
     border-radius: 10px;
     overflow: hidden;
   }
@@ -47,10 +46,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: rotateY(180deg); /* Initially rotate back face */
+    transform: rotateY(180deg);
   }
   
-  .card:hover .card-content {
-    transform: rotateY(180deg); /* Rotate the card on hover */
+  .card-back button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
   }
   

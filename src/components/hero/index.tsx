@@ -33,6 +33,10 @@ const HeroSlider: React.FC = () => {
   const [isMuted, setIsMuted] = useState<boolean[]>(Array(6).fill(true));
   const [videoTimes, setVideoTimes] = useState<number[]>(Array(6).fill(0));
 
+  const [isPrevActive, setIsPrevActive] = useState(false);
+  const [isNextActive, setIsNextActive] = useState(true); // Initially, next is active
+
+
   const toggleMute = (index: number) => {
     const newMutedState = [...isMuted];
     newMutedState[index] = !newMutedState[index];
@@ -166,14 +170,14 @@ const HeroSlider: React.FC = () => {
                 {/* <p className="text-[1rem] max-w-2xl text-gray-300 font-bold leading-8 mt-5">{slide.description}</p> */}
                 <h2 className=" font-bold md:text-[1rem] text-[0.8rem] md:mt-5">{slide.subtitle2}</h2>
                 <div className="absolute flex flex-row md:gap-5 gap-10 container mx-auto top-0 md:mt-5">
-                <button className=" hover:scale-105 hover:border duration-300 absolute cursor-pointer md:top-40 top-28 flex flex-row items-center gap-2 md:px-32 px-10 py-2 bg-white/10 rounded-lg mt-1 text-white text-[1.2rem]">
+                <button className=" absolute hover:scale-105 hover:border duration-300  cursor-pointer md:top-40 top-28 flex flex-row items-center gap-2 md:px-32 px-10 py-2 bg-white/10 rounded-lg mt-1 text-white text-[1.2rem]">
                   <span>
                     <FaPlay />
                   </span>
                   Watch Now
                 </button>
                 <div>
-                  <IoMdAdd className=" absolute  hover:border  hover:scale-105 duration-300 py-2 text-[2.8rem]  md:top-41 top-29 md:left-96 left-54 md:translate-x-3 rounded-lg bg-white/10" />
+                  <IoMdAdd className=" cursor-pointer absolute  hover:border  hover:scale-105 duration-300 py-2 text-[2.8rem]  md:top-41 top-29 md:left-96 left-54 md:translate-x-3 rounded-lg bg-white/10" />
                 </div>
               </div>
               </div>
@@ -187,37 +191,54 @@ const HeroSlider: React.FC = () => {
 
       {/* Thumbnail Swiper */}
       <div className="lg:block hidden relative container mx-auto fixed">
-        {/* Custom Navigation Buttons */}
-        <IoIosArrowBack
-          className="absolute top-1/2 -translate-y-44 text-[3rem] md:right-91 right-32 z-10 text-white p-3 rounded-full transition cursor-pointer"
-          id="prevSlide"
-        />
+      {/* Custom Navigation Buttons */}
+      <IoIosArrowBack
+        className={`absolute top-1/2 -translate-y-44 text-[3rem] md:right-91 right-32 z-10 
+        p-3 rounded-full transition cursor-pointer ${
+          isPrevActive ? "text-white" : "text-gray-500 hidden"
+        }`}
+        id="prevSlide"
+      />
 
-        <IoIosArrowForward
-          className="absolute top-1/2 -translate-y-44 text-[3rem] md:right-10 -right-2 z-10 text-white p-3 rounded-full transition cursor-pointer"
-          id="nextSlide"
-        />
+      <IoIosArrowForward
+        className={`absolute top-1/2 -translate-y-44 text-[3rem] md:right-10 -right-2 z-10 
+        p-3 rounded-full transition cursor-pointer ${
+          isNextActive ? "text-white" : "text-gray-500 hidden"
+        }`}
+        id="nextSlide"
+      />
 
-        <Swiper
-          onSwiper={setThumbsSwiper}
-          spaceBetween={10}
-          slidesPerView={4}
-          freeMode={true}
-          watchSlidesProgress={true}
-          modules={[Thumbs, Navigation]}
-          navigation={{
-            nextEl: "#nextSlide",
-            prevEl: "#prevSlide",
-          }}
-          className="absolute  left-1/2 md:-translate-y-38 -translate-y-84 transform -translate-x-3/4 w-1/4 z-10"
-        >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index} onClick={() => mainSwiperRef.current.swiper.slideTo(index)}>
-              <img src={slide.thumb} alt="Logo" className="hover:scale-105  duration-300  md:w-[100px] md:h-[70px]  rounded  transition-all duration-300" />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <Swiper
+        onSwiper={setThumbsSwiper}
+        spaceBetween={10}
+        slidesPerView={4}
+        freeMode={true}
+        watchSlidesProgress={true}
+        modules={[Thumbs, Navigation]}
+        navigation={{
+          nextEl: "#nextSlide",
+          prevEl: "#prevSlide",
+        }}
+        onSlideChange={(swiper) => {
+          setIsPrevActive(swiper.activeIndex > 0); // Change color when moving left
+          setIsNextActive(swiper.activeIndex < swiper.slides.length - 4); // Change color when moving right
+        }}
+        className="absolute left-1/2 md:-translate-y-38 -translate-y-84 transform -translate-x-3/4 w-1/4 z-10"
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide
+            key={index}
+            onClick={() => mainSwiperRef.current.swiper.slideTo(index)}
+          >
+            <img
+              src={slide.thumb}
+              alt="Logo"
+              className="hover:scale-105 cursor-pointer duration-300 md:w-[100px] md:h-[70px] rounded transition-all"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
     </div>
   );
 };

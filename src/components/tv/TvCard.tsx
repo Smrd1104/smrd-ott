@@ -32,7 +32,7 @@ const Card = ({ title, image, videoSrc, year, description }: CardProps) => {
         {title}
       </div> */}
       {isHovered && (
-        <div className="absolute md:-inset-6 md:-translate-x-10 z-50 transition-all duration-300 transform scale-105 group-hover:scale-105">
+        <div className="absolute md:-inset-6 md:-translate-x-10 z-10 transition-all duration-300 transform scale-105 group-hover:scale-105">
           <VideoCard videoSrc={videoSrc} title={title} year={year} description={description} />
         </div>
       )}
