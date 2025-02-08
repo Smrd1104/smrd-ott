@@ -152,7 +152,7 @@ const HeroSlider: React.FC = () => {
               </video>
 
               {/* Custom volume control */}
-              <div className="absolute right-2 rounded-full py-1 px-2 md:bottom-5 bottom-106   flex items-center gap-2">
+              <div className="absolute right-2 rounded-full py-1 px-2 md:bottom-5 bottom-104   flex items-center gap-2">
                 <button onClick={() => toggleMute(index)} className="text-white cursor-pointer">
                   {isMuted[index] ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
                 </button>
@@ -165,7 +165,7 @@ const HeroSlider: React.FC = () => {
                 <h2 className="md:text-[1rem] text-[0.8rem] font-bold leading-8 md:mt-2">{slide.subtitle}</h2>
                 {/* <p className="text-[1rem] max-w-2xl text-gray-300 font-bold leading-8 mt-5">{slide.description}</p> */}
                 <h2 className=" font-bold md:text-[1rem] text-[0.8rem] md:mt-5">{slide.subtitle2}</h2>
-                <div className="absolute flex flex-row gap-5 container mx-auto top-0 md:mt-5">
+                <div className="absolute flex flex-row md:gap-5 gap-10 container mx-auto top-0 md:mt-5">
                 <button className=" hover:scale-105 hover:border duration-300 absolute cursor-pointer md:top-40 top-28 flex flex-row items-center gap-2 md:px-32 px-10 py-2 bg-white/10 rounded-lg mt-1 text-white text-[1.2rem]">
                   <span>
                     <FaPlay />
