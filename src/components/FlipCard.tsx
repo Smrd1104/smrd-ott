@@ -1,13 +1,12 @@
 import React from 'react';
 import './FlipCard.css'; // Import the CSS file
-import FlipVideoCard from "../components/FlipVideoCard"
 interface FlipCardProps {
   image: string;
   title: string;
   description: string;
 }
 
-const FlipCard: React.FC<FlipCardProps> = ({ image, title, description }) => {
+const FlipCard: React.FC<FlipCardProps> = ({ image, title }) => {
   return (
     <div className="card w-[250px] h-[350px] overflow-hidden border rounded-lg ">
       <div className="card-content">

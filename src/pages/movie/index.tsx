@@ -1,4 +1,3 @@
-import React from 'react';
 import FlipCard from '../../components/FlipCard';
 import img1 from "../../assets/wednesday.jpg";
 import img2 from "../../assets/you.jpg";
