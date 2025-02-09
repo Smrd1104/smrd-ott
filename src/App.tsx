@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "../src/components/sidebar";
 import Home from "../src/pages/home";
 import LoadingSpinner from "./components/loader/Loader"; // Import your loader
-
+import Movie from "./pages/movie"
+import Demo from "./pages/demo"
 function App() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [loading, setLoading] = useState(() => {
@@ -41,7 +42,10 @@ function App() {
         <div className="flex-1 overflow-y-auto bg-black relative transition-all duration-300">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/movie" element={<Movie />} /> */}
+            <Route path="/movie" element={<Movie />} />
+            <Route path="/demo" element={<Demo />} />
+
+
           </Routes>
         </div>
       </div>

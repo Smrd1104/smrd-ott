@@ -6,6 +6,7 @@
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
     overflow-x: hidden;
+    
   }
   
   .card:hover {
