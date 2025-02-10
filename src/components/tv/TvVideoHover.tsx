@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './FlipVideoCard.css'; // Import the CSS file
+import './TvVideoHover.css'; // Import the CSS file
 import { FaPlay, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 import { IoMdAdd } from 'react-icons/io';
 

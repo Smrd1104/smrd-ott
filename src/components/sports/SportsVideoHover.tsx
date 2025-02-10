@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './FlipVideoCard.css'; // Import the CSS file
+import './SportsVideoHover.css'; // Import the CSS file
 import { FaPlay, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 import { IoMdAdd } from 'react-icons/io';
 
@@ -21,9 +21,9 @@ const FlipCard: React.FC<FlipCardProps> = ({ videoSrc, title, description,logo }
       }
     };
   return (
-    <div className="video-card md:w-[250px] md:h-[350px] overflow-hidden  rounded-lg">
-      <div className="video-card-content">
-        <div className="video-card-front relative">
+    <div className="video-card-hover md:w-[250px] md:h-[350px] overflow-hidden  rounded-lg">
+      <div className="video-card-hover-content">
+        <div className="video-card-hover-front relative">
           <video 
             src={videoSrc} 
             className="w-full  -translate-y-20 object-fit" 

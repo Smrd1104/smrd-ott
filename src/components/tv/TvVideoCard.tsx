@@ -9,7 +9,7 @@ interface VideoCardProps {
   description: string;
 }
 
-const VideoCard = ({ videoSrc, title, year, description }: VideoCardProps) => {
+const VideoCard = ({ videoSrc, title, year, description, }: VideoCardProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
 

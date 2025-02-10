@@ -49,7 +49,7 @@ const Index = () => {
   return (
     <div id="/movies" className='container mx-auto overflow-hidden'>
       <h1 className='text-center text-[3rem] drop-shadow-header py-10'>Movies</h1>
-      <div className='grid md:grid-cols-5 grid-cols-3  space-y-3  justify-center px-4 py-10'>
+      <div className='grid md:grid-cols-5 grid-cols-2  space-y-3  justify-center  md:px-4 px-14 py-10'>
         {movies.map((movie) => (
           <FlipCard key={movie.id} logo={movie.logo} image={movie.image} title={movie.title} description={movie.description} videoSrc={movie.videoSrc} />
         ))}
