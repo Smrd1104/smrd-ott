@@ -1,14 +1,20 @@
-import React from 'react';
-import './FlipCard.css'; // Import the CSS file
+import React, { useState } from 'react';
+import './FlipCard.css'; 
+import FlipVideoCard from "./FlipVideoCard"// Import the CSS file
 interface FlipCardProps {
   image: string;
   title: string;
   description: string;
+  videoSrc:string;
+  logo:string;
 }
 
-const FlipCard: React.FC<FlipCardProps> = ({ image, title }) => {
+const FlipCard: React.FC<FlipCardProps> = ({ image, title,description,videoSrc,logo }) => {
+    const [isHovered, setIsHovered] = useState(false);
+    
   return (
-    <div className="card w-[250px] h-[350px] overflow-hidden border rounded-lg ">
+    <div onMouseEnter={() => setIsHovered(true)}
+    onMouseLeave={() => setIsHovered(false)} className="card md:w-[250px]  md:h-[350px] overflow-hidden rounded-lg ">
       <div className="card-content">
         <div className="card-front relative">
           <img src={image} alt={title} className='w-full h-full object-cover' />
@@ -19,7 +25,11 @@ const FlipCard: React.FC<FlipCardProps> = ({ image, title }) => {
        
       </div>
       
-      
+      {isHovered && (
+        <div className="lg:block hidden absolute inset-0  z-10 transition-all duration-500 transform scale-105 group-hover:scale-105">
+          <FlipVideoCard videoSrc={videoSrc} logo={logo} title={title}  description={description} />
+        </div>
+      )}
     </div>
   );
 };

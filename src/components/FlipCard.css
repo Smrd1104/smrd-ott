@@ -6,6 +6,7 @@
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
     overflow-x: hidden;
+    z-index: auto;
   }
   
   .card:hover {
@@ -53,4 +54,18 @@
     font-size: 16px;
     cursor: pointer;
   }
-  
+  /* Adjust width & height for medium screens */
+@media (max-width: 1024px) { 
+  .card {
+      width: 180px;
+      height: 250px;
+  }
+}
+
+/* Adjust width & height for small screens */
+@media (max-width: 640px) { 
+  .card {
+      width: 130px;
+      height: 150px;
+  }
+}
