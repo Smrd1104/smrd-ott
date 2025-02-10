@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Sidebar from "../src/components/sidebar";
 import Home from "../src/pages/home";
 import LoadingSpinner from "./components/loader/Loader"; // Import your loader
@@ -30,7 +30,7 @@ function App() {
   }
 
   return (
-    <Router>
+   
       <div className="flex min-h-screen bg-black text-white">
         {/* Sidebar */}
         <div className={`${isExpanded ? "md:w-40" : "md:w-14"} transition-all duration-300`}>
@@ -48,7 +48,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </Router>
+   
   );
 }
 
