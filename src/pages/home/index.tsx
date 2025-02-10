@@ -2,6 +2,7 @@ import HeroSlider from '../../components/hero'
 import Sports from '../../components/sports/Sports'
 import Movies from '../../components/movies/Movies'
 import Tv from '../..//components/tv/Tv'
+import BottomNav from '../../components/navbar/BottomNav'
 const index = () => {
   return (
     <div className=''>
@@ -18,6 +19,7 @@ const index = () => {
          <FlipCard/> 
          
         </div> */}
+        <BottomNav/>
         
         </div>
        

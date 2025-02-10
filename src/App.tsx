@@ -6,6 +6,7 @@ import LoadingSpinner from "./components/loader/Loader"; // Import your loader
 import Movie from "./pages/movie"
 import Tv from "./pages/tv"
 import Sports from "./pages/sports"
+import BottomNav from "./components/navbar/BottomNav";
 
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
         <div className={`${isExpanded ? "md:w-40" : "md:w-14"} transition-all duration-300`}>
           <Sidebar setIsExpanded={setIsExpanded} />
         </div>
-
+        <BottomNav/>
         {/* Main Content */}
         <div className="flex-1 overflow-y-auto bg-black relative transition-all duration-300">
           <Routes>
