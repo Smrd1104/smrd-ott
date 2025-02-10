@@ -4,7 +4,6 @@ import Sidebar from "../src/components/sidebar";
 import Home from "../src/pages/home";
 import LoadingSpinner from "./components/loader/Loader"; // Import your loader
 import Movie from "./pages/movie"
-import Demo from "./pages/demo"
 function App() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [loading, setLoading] = useState(() => {
@@ -43,7 +42,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/movie" element={<Movie />} />
-            <Route path="/demo" element={<Demo />} />
+            {/* <Route path="/demo" element={<Demo />} /> */}
 
 
           </Routes>
