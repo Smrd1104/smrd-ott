@@ -26,7 +26,7 @@ const FlipCard: React.FC<FlipCardProps> = ({ image, title,description,videoSrc,l
       </div>
       
       {isHovered && (
-        <div className="lg:block hidden absolute inset-0  z-10 transition-all duration-500 transform scale-105 group-hover:scale-105">
+        <div className="lg:block hidden absolute inset-0  z-10 transition-all duration-300 transform scale-105 group-hover:scale-105">
           <FlipVideoCard videoSrc={videoSrc} logo={logo} title={title}  description={description} />
         </div>
       )}
