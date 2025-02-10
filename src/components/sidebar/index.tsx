@@ -14,7 +14,7 @@ const NAV_LINKS = [
   { name: "Web-Series", href: "/web-series", icon: <FaLaptop size={20} /> },
   { name: "Movies", href: "/movies", icon: <BiCameraMovie size={20} /> },
   { name: "Sports", href: "/sports", icon: <FaVolleyballBall size={20} /> },
-  { name: "Categories", href: "#categories", icon: <BiSolidCategory size={20} /> },
+  { name: "Categories", href: "/categories", icon: <BiSolidCategory size={20} /> },
 ];
 
 const Sidebar: React.FC<SidebarProps> = ({ setIsExpanded }) => {
