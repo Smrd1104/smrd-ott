@@ -142,21 +142,21 @@ const HeroSlider: React.FC = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full h-full flex flex-col text-white relative">
+            <div className="w-full h-full flex flex-col text-white relative z-10">
               {/* Video Background */}
               <video
                 ref={(el) => (videoRefs.current[index] = el)}
                 autoPlay
                 loop
                 muted={isMuted[index]}
-                className="absolute top-0 left-0 md:w-full md:h-full h-[480px] object-cover z-0"
+                className="absolute top-0 left-0 md:w-full md:h-full h-[480px] object-cover z-10"
               >
                 <source src={slide.video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
               {/* Custom volume control */}
-              <div className="absolute right-2 rounded-full py-1 px-2 md:bottom-5 bottom-104   flex items-center gap-2">
+              <div className="absolute z-10 right-2 rounded-full py-1 px-2 md:bottom-5 bottom-104   flex items-center gap-2">
                 <button onClick={() => toggleMute(index)} className="text-white cursor-pointer">
                   {isMuted[index] ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
                 </button>

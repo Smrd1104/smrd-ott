@@ -136,7 +136,7 @@ const MovieSlider = () => {
     },
   ];
   return (
-    <div id="web-series" className="container mx-auto  p-2  relative">
+    <div id="web-series" className="container mx-auto  p-2  relative z-50">
       <div className="flex flex-row justify-between items-center">
         <a href="/web-series">
         <h1 className="md:text-[2.5rem] text-[2rem] my-5 drop-shadow-header font-bold">
