@@ -8,10 +8,24 @@ import video3 from "../../assets/Vettaiyan.mp4";
 import video4 from "../../assets/raayan.mp4";
 import video5 from "../../assets/meiyazhagan.mp4";
 import video6 from "../../assets/vikram.mp4";
+import video7 from "../../assets/amaran.mp4";
+import video8 from "../../assets/rrr.mp4";
+import video9 from "../../assets/Pushpa2.mp4";
+import video10 from "../../assets/dragon.mp4";
+
 
 import logo from "../../assets/viddamuyarchi.png";
 import logo2 from "../../assets/goat.png";
 import logo3 from "../../assets/vettaiyan.png";
+import logo4 from "../../assets/raayan.png";
+import logo5 from "../../assets/meiyazhagan.png";
+import logo6 from "../../assets/vikram.png";
+import logo7 from "../../assets/amaran.png";
+import logo8 from "../../assets/rrr-logo2.png";
+import logo9 from "../../assets/pushpa22.png";
+import logo10 from "../../assets/dragon.png";
+
+
 
 import logo11 from "../../assets/vidaamuyarchi.webp";
 import logo12 from "../../assets/goat.jpg";
@@ -19,6 +33,12 @@ import logo13 from "../../assets/vettaiyan.jpg";
 import logo14 from "../../assets/maari.jpg";
 import logo15 from "../../assets/mei.jpg";
 import logo16 from "../../assets/vikram.jpg";
+import logo17 from "../../assets/amaran.jpg";
+import logo18 from "../../assets/rrr.jpg";
+import logo19 from "../../assets/pushpa.jpg";
+import logo20 from "../../assets/dragon.jpg";
+
+
 
 
 
@@ -30,8 +50,8 @@ const HeroSlider: React.FC = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   const mainSwiperRef = useRef<any>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-  const [isMuted, setIsMuted] = useState<boolean[]>(Array(6).fill(true));
-  const [videoTimes, setVideoTimes] = useState<number[]>(Array(6).fill(0));
+  const [isMuted, setIsMuted] = useState<boolean[]>(Array(10).fill(true));
+  const [videoTimes, setVideoTimes] = useState<number[]>(Array(10).fill(0));
 
   const [isPrevActive, setIsPrevActive] = useState(false);
   const [isNextActive, setIsNextActive] = useState(true); // Initially, next is active
@@ -94,7 +114,7 @@ const HeroSlider: React.FC = () => {
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video3,
     },
-    {logo:logo,
+    {logo:logo4,
       title: "OST IN SPACE",
       thumb:logo14,
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
@@ -103,7 +123,7 @@ const HeroSlider: React.FC = () => {
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video4,
     },
-    {logo:logo,
+    {logo:logo5,
       title: "OST IN SPACE",
       thumb:logo15,
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
@@ -112,7 +132,7 @@ const HeroSlider: React.FC = () => {
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video5,
     },
-    {logo:logo,
+    {logo:logo6,
       title: "OST IN SPACE",
       thumb:logo16,
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
@@ -120,6 +140,42 @@ const HeroSlider: React.FC = () => {
       description:
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video6,
+    },
+    {logo:logo7,
+      title: "OST IN SPACE",
+      thumb:logo17,
+      subtitle: "2024 . U/A . 1 Season . 7 Languages",
+      subtitle2: "Comedy | Drama | Action | Romance",
+      description:
+        "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
+      video: video7,
+    },
+     {logo:logo8,
+      title: "OST IN SPACE",
+      thumb:logo18,
+      subtitle: "2024 . U/A . 1 Season . 7 Languages",
+      subtitle2: "Comedy | Drama | Action | Romance",
+      description:
+        "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
+      video: video8,
+    },
+     {logo:logo9,
+      title: "OST IN SPACE",
+      thumb:logo19,
+      subtitle: "2024 . U/A . 1 Season . 7 Languages",
+      subtitle2: "Comedy | Drama | Action | Romance",
+      description:
+        "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
+      video: video9,
+    },
+     {logo:logo10,
+      title: "OST IN SPACE",
+      thumb:logo20,
+      subtitle: "2024 . U/A . 1 Season . 7 Languages",
+      subtitle2: "Comedy | Drama | Action | Romance",
+      description:
+        "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
+      video: video10,
     },
   ];
 
@@ -136,6 +192,7 @@ const HeroSlider: React.FC = () => {
         ref={mainSwiperRef}
         pagination={{ clickable: false }}
         modules={[Navigation, Thumbs]}
+        autoplay
         loop={true}
         thumbs={{ swiper: thumbsSwiper }}
         className="w-full h-screen"
@@ -146,7 +203,6 @@ const HeroSlider: React.FC = () => {
               {/* Video Background */}
               <video
                 ref={(el) => (videoRefs.current[index] = el)}
-                autoPlay
                 loop
                 muted={isMuted[index]}
                 className="absolute top-0 left-0 md:w-full md:h-full h-[480px] object-cover z-10"
