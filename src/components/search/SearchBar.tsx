@@ -17,8 +17,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   };
 
   return (
-    <div className="relative w-full max-w-full px-2 py-2">
-      <div className="absolute top-1/2 left-5 transform -translate-y-1/2">
+    <div className="relative w-full max-w-full px-2 py-2 ">
+      <div className="absolute z-10 top-1/2 left-5 transform -translate-y-1/2 ">
         <Search className="text-white text-4xl " />
       </div>
       <input
@@ -26,7 +26,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         placeholder="Search movies..."
         value={query}
         onChange={handleInputChange}
-        className="w-full pl-12 pr-4 py-3 font-semibold rounded-lg text-[1.5rem] bg-gray-500/40 focus:outline-none"
+        className="w-full pl-12 pr-4 py-3 font-semibold rounded-xl text-[1.5rem]  backdrop-blur-3xl bg-white/15  focus:outline-none "
       />
     </div>
   );
