@@ -9,7 +9,6 @@ import Sports from "./pages/sports"
 import Category from "./pages/category"
 
 import BottomNav from "./components/navbar/BottomNav";
-import SearchBar from "./pages/search";
 
 
 function App() {

@@ -5,7 +5,6 @@ import Tv from '../../components/tv/Tv'
 import Category from '../category/index'
 
 import BottomNav from '../../components/navbar/BottomNav'
-import SearchBar from '../../components/search/SearchBar'
 const index = () => {
   return (
     <div className=''>
