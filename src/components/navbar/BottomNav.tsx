@@ -10,7 +10,7 @@ const BottomNav = () => {
   ];
 
   return (
-    <nav className="lg:hidden fixed bottom-0 left-0 right-0  shadow-md  flex justify-around py-2 z-10 bg-black">
+    <nav className="lg:hidden fixed bottom-0 left-0 right-0  shadow-md  flex justify-around py-2 z-50 bg-black">
       {navItems.map(({ name, icon: Icon, path }) => (
         <NavLink
           key={name}
