@@ -9,6 +9,7 @@ import Sports from "./pages/sports"
 import Category from "./pages/category"
 
 import BottomNav from "./components/navbar/BottomNav";
+import SearchBar from "./pages/search";
 
 
 function App() {
@@ -52,6 +53,8 @@ function App() {
             <Route path="/web-series" element={<Tv />} />
             <Route path="/sports" element={<Sports />} />
             <Route path="/categories" element={<Category />} />
+            {/* <Route path="/search" element={<SearchBar />} /> */}
+
 
 
 

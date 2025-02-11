@@ -1,0 +1,35 @@
+import { Search } from "lucide-react";
+import { useState } from "react";
+
+interface SearchBarProps {
+   
+    onSearch: (query: string) => void;
+  }
+  
+
+const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
+  const [query, setQuery] = useState("");
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const input = e.target.value;
+    setQuery(input);
+    onSearch(input);
+  };
+
+  return (
+    <div className="relative w-full max-w-full px-2 py-2">
+      <div className="absolute top-1/2 left-5 transform -translate-y-1/2">
+        <Search className="text-white text-4xl " />
+      </div>
+      <input
+        type="text"
+        placeholder="Search movies..."
+        value={query}
+        onChange={handleInputChange}
+        className="w-full pl-12 pr-4 py-3 font-semibold rounded-lg text-[1.5rem] bg-gray-500/40 focus:outline-none"
+      />
+    </div>
+  );
+};
+
+export default SearchBar;

@@ -8,7 +8,7 @@ import img6 from "../../assets/the-boys.jpeg";
 import img7 from "../../assets/super-natural.jpg";
 import img8 from "../../assets/elite.jpg";
 
-import bgVideo1 from "../../assets/vikram.mp4";
+import bgVideo1 from "../../assets/wednesday.mp4";
 import bgVideo2 from "../../assets/Vettaiyan.mp4"
 import bgVideo3 from "../../assets/bg-video-movie.mp4"
 import bgVideo4 from "../../assets/goat.mp4"
@@ -17,7 +17,7 @@ import bgVideo6 from "../../assets/meiyazhagan.mp4"
 import bgVideo7 from "../../assets/Pushpa2.mp4"
 import bgVideo8 from "../../assets/rrr.mp4"
 
-import logo from "../../assets/viddamuyarchi.png";
+import logo from "../../assets/wednesday.png";
 import logo2 from "../../assets/goat.png";
 import logo3 from "../../assets/vettaiyan.png";
 

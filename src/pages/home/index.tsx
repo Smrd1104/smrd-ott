@@ -5,6 +5,7 @@ import Tv from '../../components/tv/Tv'
 import Category from '../category/index'
 
 import BottomNav from '../../components/navbar/BottomNav'
+import SearchBar from '../../components/search/SearchBar'
 const index = () => {
   return (
     <div className=''>
@@ -14,14 +15,7 @@ const index = () => {
         <Movies/>
         <Sports/>
         <Category/>
-        {/* <div className='flex flex-row gap-2 px-10 py-10 '>
-        <FlipCard/>
-        <FlipCard/>
-         <FlipCard/> 
-         <FlipCard/> 
-         <FlipCard/> 
-         
-        </div> */}
+       
         <BottomNav/>
         
         </div>
