@@ -19,7 +19,7 @@ const Card = ({ title, image, videoSrc, year, description }: CardProps) => {
 
   return (
     <div
-      className="relative group"
+      className="relative group md:mt-0 mt-3"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

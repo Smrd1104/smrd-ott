@@ -21,6 +21,7 @@ import bgVideo5 from "../../assets/bg-4.mp4"
 import bgVideo6 from "../../assets/bg-5.mp4"
 import bgVideo7 from "../../assets/2bg.mp4"
 import bgVideo8 from "../../assets/4bg.mp4"
+import { useState } from "react";
 
 
 
@@ -88,65 +89,82 @@ const cardData = [
 ];
 
 const MovieSlider = () => {
+   const [isPrevActive, setIsPrevActive] = useState(false);
+    const [isNextActive, setIsNextActive] = useState(true); // Initially, next is active
   return (
-    <div id="sports" className="container mx-auto p-2 relative">
-    <div className="flex flex-row justify-between items-center">
-      <h1 className="md:text-[2.5rem] text-[2rem] my-5 drop-shadow-header font-bold">
-       Sports
-      </h1>
-      <div className="flex flex-row gap-2 text-gray-200 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center">
-      <a href="/sports">
-        <h3 className="md:text-[1rem] text-[1rem] my-5 font-md">View All</h3>
+    <div id="sports" className="container mx-auto  p-2  relative z-50">
+      <div className="flex flex-row justify-between items-center">
+        <a href="/sports">
+        <h1 className="md:text-[2.5rem] text-[1.3rem]  drop-shadow-header font-bold">
+          Sports
+        </h1>
         </a>
-        <span className="text-[1rem]">
-          <IoIosArrowForward />
-        </span>
+        <div className="flex flex-row gap-2 text-gray-200 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center">
+        <a href="/sports">
+          <h3 className="md:text-[1rem] text-[1rem]  font-md">View All</h3>
+          </a>
+          <span className="text-[1rem]">
+            <IoIosArrowForward />
+          </span>
+        </div>
       </div>
-    </div>
-    <IoIosArrowBack
-      className="absolute top-1/2 translate-y-6 text-[3rem] left-6 z-10 text-white p-3 bg-black/20 rounded-full transition cursor-pointer"
-      id="sport-prevSlide"
-    />
-    <IoIosArrowForward
-      className="absolute top-1/2 translate-y-6 text-[3rem] right-6 z-10 text-white p-3 bg-black/20 rounded-full transition cursor-pointer"
-      id="sport-nextSlide"
-    />
-    <Swiper
-modules={[Navigation, Autoplay, EffectCoverflow]}
-effect="coverflow"
-grabCursor={false}
-centeredSlides={true}
-slidesPerView={5}  // Show 5 slides at a time
-spaceBetween={10}  // Reduce gap between slides
-coverflowEffect={{
-  rotate: 20,
-  stretch: 0,
-  depth: 100,
-  modifier: 1,
-  slideShadows: false,
-}}
-navigation={{
-  nextEl: "#sport-nextSlide",
-  prevEl: "#sport-prevSlide",
-}}
-loop={true}
+      <IoIosArrowBack
+        className={`lg:block hidden bg-black/20 absolute top-1/2 md:translate-y-6 translate-y-4.5  text-[3rem] md:left-6 left-1 z-10  p-3 rounded-full transition cursor-pointer  ${
+          isPrevActive ? "text-white" : "text-gray-500 hidden"
+        }`}
+        id="sport-prevSlide"
+      />
+      <IoIosArrowForward
+        className={`lg:block hidden bg-black/20 absolute top-1/2 md:translate-y-6 translate-y-4.5  text-[3rem] md:right-6 right-1 z-10  p-3  rounded-full transition cursor-pointer  ${
+          isNextActive ? "text-white" : "text-gray-500 hidden"
+        }`}
+        id="sport-nextSlide"
+      />
+     <Swiper
+  modules={[Navigation, Autoplay, EffectCoverflow]}
+  effect="coverflow"
+  grabCursor={false}
+  centeredSlides={true}
+  spaceBetween={10}  
+  coverflowEffect={{
+    rotate: 20,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  }}
+  navigation={{
+    nextEl: "#sport-nextSlide",
+    prevEl: "#sport-prevSlide",
+  }}
+  onSlideChange={(swiper) => {
+    setIsPrevActive(swiper.activeIndex > 0); 
+    setIsNextActive(swiper.activeIndex < swiper.slides.length -2); 
+  }}
+  loop={true}
+  breakpoints={{
+    320: { slidesPerView: 2.2, spaceBetween: 5 ,  loop: false,  effect: "slide",centeredSlides:false},  // Extra small screens
+    640: { slidesPerView: 2.2, spaceBetween: 5 , loop: false,  effect: "slide",centeredSlides:false}, // Small screens
+    1024: { slidesPerView: 5, spaceBetween: 10, }, // Large screens
+  }}
 >
 
-      {cardData.map((item) => (
-        <SwiperSlide key={item.id} className="w-[250px]">
-          <div className="hover:scale-105 duration-300 transition-all py-10">
-            <Card
-              title={item.title}
-              image={item.image}
-              videoSrc={item.videoSrc}
-              year={item.year}
-              description={item.description}
-            />
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
+
+        {cardData.map((item) => (
+          <SwiperSlide key={item.id} className="w-[250px]">
+            <div className="md:hover:scale-105 duration-300 transition-all md:py-10">
+              <Card
+                title={item.title}
+                image={item.image}
+                videoSrc={item.videoSrc}
+                year={item.year}
+                description={item.description}
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 

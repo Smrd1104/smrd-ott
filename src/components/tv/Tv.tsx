@@ -139,13 +139,13 @@ const MovieSlider = () => {
     <div id="web-series" className="container mx-auto  p-2  relative z-50">
       <div className="flex flex-row justify-between items-center">
         <a href="/web-series">
-        <h1 className="md:text-[2.5rem] text-[2rem] my-5 drop-shadow-header font-bold">
+        <h1 className="md:text-[2.5rem] text-[1.3rem]  drop-shadow-header font-bold">
           Web-Series
         </h1>
         </a>
         <div className="flex flex-row gap-2 text-gray-200 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center">
         <a href="/web-series">
-          <h3 className="md:text-[1rem] text-[1rem] my-5 font-md">View All</h3>
+          <h3 className="md:text-[1rem] text-[1rem]  font-md">View All</h3>
           </a>
           <span className="text-[1rem]">
             <IoIosArrowForward />
@@ -153,13 +153,13 @@ const MovieSlider = () => {
         </div>
       </div>
       <IoIosArrowBack
-        className={`absolute top-1/2 translate-y-6 text-[3rem] md:left-6 left-1 z-10  p-3 rounded-full transition cursor-pointer  ${
+        className={`lg:block hidden bg-black/20 absolute top-1/2 md:translate-y-6 translate-y-4.5 text-[3rem] md:left-6 left-1 z-10  p-3 rounded-full transition cursor-pointer  ${
           isPrevActive ? "text-white" : "text-gray-500 hidden"
         }`}
         id="tv-prevSlide"
       />
       <IoIosArrowForward
-        className={`absolute top-1/2 translate-y-6 text-[3rem] md:right-6 right-1 z-10  p-3  rounded-full transition cursor-pointer  ${
+        className={`lg:block hidden bg-black/20  absolute top-1/2 md:translate-y-6 translate-y-4.5  text-[3rem] md:right-6 right-1 z-10  p-3  rounded-full transition cursor-pointer  ${
           isNextActive ? "text-white" : "text-gray-500 hidden"
         }`}
         id="tv-nextSlide"
@@ -187,8 +187,8 @@ const MovieSlider = () => {
   }}
   loop={true}
   breakpoints={{
-    320: { slidesPerView: 2.2, spaceBetween: 0 ,  loop: false,  effect: "slide",centeredSlides:false},  // Extra small screens
-    640: { slidesPerView: 2.2, spaceBetween: 0 , loop: false,  effect: "slide",centeredSlides:false}, // Small screens
+    320: { slidesPerView: 2.2, spaceBetween: 5 ,  loop: false,  effect: "slide",centeredSlides:false},  // Extra small screens
+    640: { slidesPerView: 2.2, spaceBetween: 5 , loop: false,  effect: "slide",centeredSlides:false}, // Small screens
     1024: { slidesPerView: 5, spaceBetween: 10, }, // Large screens
   }}
 >
@@ -196,7 +196,7 @@ const MovieSlider = () => {
 
         {cardData.map((item) => (
           <SwiperSlide key={item.id} className="w-[250px]">
-            <div className="md:hover:scale-105 duration-300 transition-all py-10">
+            <div className="md:hover:scale-105 duration-300 transition-all md:py-10">
               <Card
                 title={item.title}
                 image={item.image}

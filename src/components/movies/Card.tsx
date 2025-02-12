@@ -19,14 +19,14 @@ const Card = ({ title, image, videoSrc, year, description }: CardProps) => {
 
   return (
     <div
-      className="relative group"
+      className="relative group md:mt-0 mt-3"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <img
         src={image}
         alt={title}
-        className="md:w-[250px] w-[200px] md:h-[280px] h-[150px] rounded-md border shadow-lg object-fit transition-opacity duration-300 group-hover:opacity-0"
+        className="md:w-[250px] w-[200px] md:h-[280px] h-[120px] rounded-md  shadow-lg object-fit transition-opacity duration-300 group-hover:opacity-0"
       />
       {/* <div className="absolute bottom-3 left-3 bg-black/50 text-white p-2 drop-shadow rounded-md text-sm">
         {title}
