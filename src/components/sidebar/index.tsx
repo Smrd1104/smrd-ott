@@ -49,7 +49,7 @@ const Sidebar: React.FC<SidebarProps> = ({ setIsExpanded }) => {
       </a>
 
       {/* Navigation Links */}
-      <ul className="flex flex-col gap-10 text-lg mt-20">
+      <ul className="flex flex-col gap-10 text-lg mt-10">
         {NAV_LINKS.map((link) => (
           <li key={link.name} className="flex items-center">
             <NavLink
