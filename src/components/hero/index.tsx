@@ -186,7 +186,7 @@ const HeroSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full h-auto relative">
+    <div className="w-full h-auto relative md:pb-0 pb-10">
       {/* Main Swiper */}
       <Swiper
         ref={mainSwiperRef}
@@ -212,28 +212,28 @@ const HeroSlider: React.FC = () => {
               </video>
 
               {/* Custom volume control */}
-              <div className="absolute z-10 right-2 rounded-full py-1 px-2 md:bottom-5 bottom-104   flex items-center gap-2">
+              <div className="absolute z-10 right-2 rounded-full py-1 px-2 md:bottom-5 bottom-96   flex items-center gap-2">
                 <button onClick={() => toggleMute(index)} className="text-white cursor-pointer">
                   {isMuted[index] ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
                 </button>
               </div>
 
               {/* Content Overlay */}
-              <div className="relative text-left md:top-78 top-64 left-5 z-10 container mx-auto ">
-                <img src={slide.logo} alt="Logo" className="md:w-[150px] w-[100px]  h-auto transition-all duration-300" />
+              <div className="relative md:text-left text-center md:top-78 top-58 left-5 z-10 container mx-auto flex flex-col lg:items-start items-center">
+                <img src={slide.logo} alt="Logo" className="md:w-[150px] w-[300px]  h-[150px] transition-all  duration-300 md:mt-0 mt-2" />
                 {/* <h1 className="text-2xl font-bold leading-8 uppercase ">{slide.title}</h1> */}
-                <h2 className="md:text-[1rem] text-[0.8rem] font-bold leading-8 md:mt-2">{slide.subtitle}</h2>
+                <h2 className="lg:block hidden md:text-[1rem] text-[0.8rem] font-bold leading-8 md:mt-2">{slide.subtitle}</h2>
                 {/* <p className="text-[1rem] max-w-2xl text-gray-300 font-bold leading-8 mt-5">{slide.description}</p> */}
-                <h2 className=" font-bold md:text-[1rem] text-[0.8rem] md:mt-5">{slide.subtitle2}</h2>
-                <div className="absolute flex flex-row md:gap-5 gap-10 container mx-auto top-0 md:mt-5">
-                <button className=" absolute hover:scale-105 hover:border duration-300  cursor-pointer md:top-40 top-28 flex flex-row items-center gap-2 md:px-32 px-10 py-2 bg-white/10 rounded-lg mt-1 text-white text-[1.2rem]">
+                <h2 className=" lg:block hidden font-bold md:text-[1rem] text-[0.8rem] md:mt-5">{slide.subtitle2}</h2>
+                <div className="absolute flex flex-row md:gap-5  container mx-auto top-0 md:mt-5 lg:items-start items-center md:translate-x-0 translate-x-16 md:translate-y-0 translate-y-6">
+                <button className=" absolute hover:scale-105 hover:border duration-300  cursor-pointer md:top-40 top-34 flex flex-row items-center gap-2 md:px-32 px-8 py-2 bg-white/10 rounded-lg mt-1 text-white text-[1.2rem]">
                   <span>
                     <FaPlay />
                   </span>
                   Watch Now
                 </button>
                 <div>
-                  <IoMdAdd className=" cursor-pointer absolute  hover:border  hover:scale-105 duration-300 py-2 text-[2.8rem]  md:top-41 top-29 md:left-96 left-54 md:translate-x-3 rounded-lg bg-white/10" />
+                  <IoMdAdd className=" cursor-pointer absolute  hover:border  hover:scale-105 duration-300 py-2 text-[2.8rem]  md:top-41 top-35 md:left-96 left-48 md:translate-x-3 translate-x-2 rounded-lg bg-white/10" />
                 </div>
               </div>
               </div>
@@ -246,7 +246,7 @@ const HeroSlider: React.FC = () => {
       </Swiper>
 
       {/* Thumbnail Swiper */}
-      <div className="lg:block hidden relative container mx-auto fixed">
+      <div className="lg:block hidden relative container mx-auto ">
       {/* Custom Navigation Buttons */}
       <IoIosArrowBack
         className={`absolute top-1/2 -translate-y-44 text-[3rem] md:right-91 right-32 z-10 
