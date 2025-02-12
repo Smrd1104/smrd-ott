@@ -94,46 +94,46 @@ const MovieSlider = () => {
       year: "2025 . U/A 2025 . 1 Season",
       description: "Spider-free milestones are a mission",
     },
-    {
-      id: 9,
-      title: "Dexter",
-      image: img4,
-      videoSrc: bgVideo4,
-      year: "2025 . U/A 2025 . 1 Season",
-      description: "Spider-free milestones are a mission",
-    },
-    {
-      id: 10,
-      title: "Elite",
-      image: img5,
-      videoSrc: bgVideo5,
-      year: "2025 . U/A 2025 . 1 Season",
-      description: "Spider-free milestones are a mission",
-    },
-    {
-      id: 11,
-      title: "The Boys",
-      image: img6,
-      videoSrc: bgVideo6,
-      year: "2025 . U/A 2025 . 1 Season",
-      description: "Spider-free milestones are a mission",
-    },
-    {
-      id: 12,
-      title: "Super Natural",
-      image: img7,
-      videoSrc: bgVideo7,
-      year: "2025 . U/A 2025 . 1 Season",
-      description: "Spider-free milestones are a mission",
-    },
-    {
-      id: 13,
-      title: "Elite",
-      image: img8,
-      videoSrc: bgVideo8,
-      year: "2025 . U/A 2025 . 1 Season",
-      description: "Spider-free milestones are a mission",
-    },
+    // {
+    //   id: 9,
+    //   title: "Dexter",
+    //   image: img4,
+    //   videoSrc: bgVideo4,
+    //   year: "2025 . U/A 2025 . 1 Season",
+    //   description: "Spider-free milestones are a mission",
+    // },
+    // {
+    //   id: 10,
+    //   title: "Elite",
+    //   image: img5,
+    //   videoSrc: bgVideo5,
+    //   year: "2025 . U/A 2025 . 1 Season",
+    //   description: "Spider-free milestones are a mission",
+    // },
+    // {
+    //   id: 11,
+    //   title: "The Boys",
+    //   image: img6,
+    //   videoSrc: bgVideo6,
+    //   year: "2025 . U/A 2025 . 1 Season",
+    //   description: "Spider-free milestones are a mission",
+    // },
+    // {
+    //   id: 12,
+    //   title: "Super Natural",
+    //   image: img7,
+    //   videoSrc: bgVideo7,
+    //   year: "2025 . U/A 2025 . 1 Season",
+    //   description: "Spider-free milestones are a mission",
+    // },
+    // {
+    //   id: 13,
+    //   title: "Elite",
+    //   image: img8,
+    //   videoSrc: bgVideo8,
+    //   year: "2025 . U/A 2025 . 1 Season",
+    //   description: "Spider-free milestones are a mission",
+    // },
   ];
   return (
     <div id="web-series" className="container mx-auto  p-2  relative z-50">
@@ -153,24 +153,23 @@ const MovieSlider = () => {
         </div>
       </div>
       <IoIosArrowBack
-        className={`absolute top-1/2 translate-y-6 text-[3rem] left-6 z-10  p-3 bg-black/20 rounded-full transition cursor-pointer  ${
+        className={`absolute top-1/2 translate-y-6 text-[3rem] md:left-6 left-1 z-10  p-3 rounded-full transition cursor-pointer  ${
           isPrevActive ? "text-white" : "text-gray-500 hidden"
         }`}
         id="tv-prevSlide"
       />
       <IoIosArrowForward
-        className={`absolute top-1/2 translate-y-6 text-[3rem] right-6 z-10  p-3 bg-black/20 rounded-full transition cursor-pointer  ${
+        className={`absolute top-1/2 translate-y-6 text-[3rem] md:right-6 right-1 z-10  p-3  rounded-full transition cursor-pointer  ${
           isNextActive ? "text-white" : "text-gray-500 hidden"
         }`}
         id="tv-nextSlide"
       />
-      <Swiper
+     <Swiper
   modules={[Navigation, Autoplay, EffectCoverflow]}
   effect="coverflow"
   grabCursor={false}
   centeredSlides={true}
-  slidesPerView={5}  // Show 5 slides at a time
-  spaceBetween={10}  // Reduce gap between slides
+  spaceBetween={10}  
   coverflowEffect={{
     rotate: 20,
     stretch: 0,
@@ -183,15 +182,21 @@ const MovieSlider = () => {
     prevEl: "#tv-prevSlide",
   }}
   onSlideChange={(swiper) => {
-    setIsPrevActive(swiper.activeIndex > 0); // Change color when moving left
-    setIsNextActive(swiper.activeIndex < swiper.slides.length - 4); // Change color when moving right
+    setIsPrevActive(swiper.activeIndex > 0); 
+    setIsNextActive(swiper.activeIndex < swiper.slides.length -2); 
   }}
   loop={true}
+  breakpoints={{
+    320: { slidesPerView: 2.2, spaceBetween: 0 ,  loop: false,  effect: "slide",centeredSlides:false},  // Extra small screens
+    640: { slidesPerView: 2.2, spaceBetween: 0 , loop: false,  effect: "slide",centeredSlides:false}, // Small screens
+    1024: { slidesPerView: 5, spaceBetween: 10, }, // Large screens
+  }}
 >
+
 
         {cardData.map((item) => (
           <SwiperSlide key={item.id} className="w-[250px]">
-            <div className="hover:scale-105 duration-300 transition-all py-10">
+            <div className="md:hover:scale-105 duration-300 transition-all py-10">
               <Card
                 title={item.title}
                 image={item.image}
