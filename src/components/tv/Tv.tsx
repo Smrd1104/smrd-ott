@@ -187,8 +187,8 @@ const MovieSlider = () => {
   }}
   loop={true}
   breakpoints={{
-    320: { slidesPerView: 2.2, spaceBetween: 5 ,  loop: false,  effect: "slide",centeredSlides:false},  // Extra small screens
-    640: { slidesPerView: 2.2, spaceBetween: 5 , loop: false,  effect: "slide",centeredSlides:false}, // Small screens
+    320: { slidesPerView: 3.3, spaceBetween: 5 ,  loop: false,  effect: "slide",centeredSlides:false},  // Extra small screens
+    640: { slidesPerView: 3.3, spaceBetween: 5, loop: false,  effect: "slide",centeredSlides:false}, // Small screens
     1024: { slidesPerView: 5, spaceBetween: 10, }, // Large screens
   }}
 >
