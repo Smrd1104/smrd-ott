@@ -39,6 +39,20 @@ import logo19 from "../../assets/pushpa.jpg";
 import logo20 from "../../assets/dragon.jpg";
 
 
+import logoBlack from "../../assets/logo-new.png";
+import bgImage from "../../assets/bgImg-vidaamuyarchi.jpg"
+import bgImage2 from "../../assets/bgimg-goat.jpg"
+import bgImage3 from "../../assets/vettaiyan-bg.jpg"
+import bgImage4 from "../../assets/raayan-bg.jpg"
+import bgImage5 from "../../assets/mei-bg.jpg"
+import bgImage6 from "../../assets/vikram-bg.jpg"
+import bgImage7 from "../../assets/amaran-bg.jpg"
+import bgImage8 from "../../assets/rrr-bg.jpg"
+import bgImage9 from "../../assets/pushpa-bg.jpg"
+import bgImage10 from "../../assets/dragon-bg.jpg"
+
+
+
 
 
 
@@ -85,10 +99,25 @@ const HeroSlider: React.FC = () => {
       videoRefs.current[activeIndex]!.play();
     }
   };
+  interface Slide {
+    id: number;
+    
+    bgImage: string;
+    logo:string;
+    thumb:string;
+    title:string;
+    subtitle:string;
+    subtitle2:string;
+    description:string;
+    video:string;
 
-  const slides = [
-    { logo:logo,
+  }
+
+  const slides:Slide[] = [
+    { id:1,
+      logo:logo,
       thumb:logo11,
+      bgImage:bgImage,
       title: "Vidaamuyarchi",
       subtitle: "2025 . U/A . 5 Languages ",
       subtitle2: "Comedy | Drama | Action | Romance",
@@ -96,8 +125,10 @@ const HeroSlider: React.FC = () => {
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video1,
     },
-    { logo:logo2,
+    { id:2,
+      logo:logo2,
       thumb:logo12,
+      bgImage:bgImage2,
       title: "GOAT",
       subtitle: "2024 . U/A  . 5 Languages",
       subtitle2: "Comedy | Drama | Action | Romance",
@@ -105,8 +136,10 @@ const HeroSlider: React.FC = () => {
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video2,
     },
-    {logo:logo3,
+    {id:3,
+      logo:logo3,
       thumb:logo13,
+      bgImage:bgImage3,
       title: "OST IN SPACE",
       subtitle: "2025 . U/A . 5 Languages",
       subtitle2: "Comedy | Drama | Action | Romance",
@@ -114,7 +147,8 @@ const HeroSlider: React.FC = () => {
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video3,
     },
-    {logo:logo4,
+    {id:4,bgImage:bgImage4,
+      logo:logo4,
       title: "OST IN SPACE",
       thumb:logo14,
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
@@ -123,7 +157,8 @@ const HeroSlider: React.FC = () => {
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video4,
     },
-    {logo:logo5,
+    {id:5,bgImage:bgImage5,
+      logo:logo5,
       title: "OST IN SPACE",
       thumb:logo15,
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
@@ -132,7 +167,8 @@ const HeroSlider: React.FC = () => {
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video5,
     },
-    {logo:logo6,
+    {id:6,bgImage:bgImage6,
+      logo:logo6,
       title: "OST IN SPACE",
       thumb:logo16,
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
@@ -141,7 +177,8 @@ const HeroSlider: React.FC = () => {
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video6,
     },
-    {logo:logo7,
+    {id:7,bgImage:bgImage7,
+      logo:logo7,
       title: "OST IN SPACE",
       thumb:logo17,
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
@@ -150,7 +187,8 @@ const HeroSlider: React.FC = () => {
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video7,
     },
-     {logo:logo8,
+     {id:8,bgImage:bgImage8,
+      logo:logo8,
       title: "OST IN SPACE",
       thumb:logo18,
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
@@ -159,7 +197,8 @@ const HeroSlider: React.FC = () => {
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video8,
     },
-     {logo:logo9,
+     {id:9,bgImage:bgImage9,
+      logo:logo9,
       title: "OST IN SPACE",
       thumb:logo19,
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
@@ -168,7 +207,8 @@ const HeroSlider: React.FC = () => {
         "Spider-free milestones are a mission to protect his loved ones when Occorp, sensed by its childhood friend Kerry Dobson, unleashing a slow of Hits.",
       video: video9,
     },
-     {logo:logo10,
+     {id:10,bgImage:bgImage10,
+      logo:logo10,
       title: "OST IN SPACE",
       thumb:logo20,
       subtitle: "2024 . U/A . 1 Season . 7 Languages",
@@ -187,6 +227,11 @@ const HeroSlider: React.FC = () => {
 
   return (
     <div className="w-full h-auto relative md:pb-0 pb-10">
+      <a href="/">
+        <div className="lg:hidden absolute md:top-0 top-2  z-10 flex justify-start  md:drop-shadow   ">
+          <img src={logoBlack} alt="Logo" className="w-14 translate-x-3 h-auto rounded-full" />
+        </div>
+      </a>
       {/* Main Swiper */}
       <Swiper
         ref={mainSwiperRef}
@@ -205,35 +250,38 @@ const HeroSlider: React.FC = () => {
                 ref={(el) => (videoRefs.current[index] = el)}
                 loop
                 muted={isMuted[index]}
-                className="absolute top-0 left-0 md:w-full md:h-full h-[480px] object-cover z-10"
+                className="lg:block hidden absolute top-0 left-0 md:w-full md:h-full h-[480px] object-cover z-10"
               >
                 <source src={slide.video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+              <div className="lg:hidden absolute">
+              <img src={slide.bgImage} alt="image" className="w-[410px] h-[460px]   "/>
+              </div>
 
               {/* Custom volume control */}
-              <div className="absolute z-10 right-2 rounded-full py-1 px-2 md:bottom-5 bottom-96   flex items-center gap-2">
+              <div className="lg:block hidden absolute z-10 right-2 rounded-full py-1 px-2 md:bottom-5 bottom-98   flex items-center gap-2">
                 <button onClick={() => toggleMute(index)} className="text-white cursor-pointer">
                   {isMuted[index] ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
                 </button>
               </div>
 
               {/* Content Overlay */}
-              <div className="relative md:text-left text-center md:top-78 top-58 left-5 z-10 container mx-auto flex flex-col lg:items-start items-center">
-                <img src={slide.logo} alt="Logo" className="md:w-[150px] w-[300px]  h-[150px] transition-all  duration-300 md:mt-0 mt-2" />
+              <div className="relative md:text-left text-center md:top-78 top-58 md:left-5 z-10 container mx-auto flex flex-col lg:items-start items-center ">
+                <img src={slide.logo} alt="Logo" className="md:w-[150px] w-[300px] md:h-auto h-[150px] transition-all  duration-300 md:mt-0 mt-2" />
                 {/* <h1 className="text-2xl font-bold leading-8 uppercase ">{slide.title}</h1> */}
                 <h2 className="lg:block hidden md:text-[1rem] text-[0.8rem] font-bold leading-8 md:mt-2">{slide.subtitle}</h2>
                 {/* <p className="text-[1rem] max-w-2xl text-gray-300 font-bold leading-8 mt-5">{slide.description}</p> */}
                 <h2 className=" lg:block hidden font-bold md:text-[1rem] text-[0.8rem] md:mt-5">{slide.subtitle2}</h2>
-                <div className="absolute flex flex-row md:gap-5  container mx-auto top-0 md:mt-5 lg:items-start items-center md:translate-x-0 translate-x-16 md:translate-y-0 translate-y-6">
-                <button className=" absolute hover:scale-105 hover:border duration-300  cursor-pointer md:top-40 top-34 flex flex-row items-center gap-2 md:px-32 px-8 py-2 bg-white/10 rounded-lg mt-1 text-white text-[1.2rem]">
+                <div className="relative flex flex-row md:gap-5  container mx-auto top-0 md:mt-5 lg:items-start items-center md:translate-x-0  translate-x-14 md:translate-y-0 translate-y-4">
+                <button className=" absolute hover:scale-105 hover:border duration-300  cursor-pointer md:top-4 top-0 flex flex-row items-center gap-2   md:px-32 px-18 py-2 bg-gradient-to-r from-blue-500/90 to-blue-700/90 rounded-lg mt-1 text-white text-[1.2rem]">
                   <span>
                     <FaPlay />
                   </span>
                   Watch Now
                 </button>
                 <div>
-                  <IoMdAdd className=" cursor-pointer absolute  hover:border  hover:scale-105 duration-300 py-2 text-[2.8rem]  md:top-41 top-35 md:left-96 left-48 md:translate-x-3 translate-x-2 rounded-lg bg-white/10" />
+                  <IoMdAdd className=" cursor-pointer absolute  hover:border  hover:scale-105 duration-300 py-2 text-[2.7rem]  md:top-5 top-1.5  md:left-96 left-62 md:translate-x-3 translate-x-5 rounded-lg bg-white/10" />
                 </div>
               </div>
               </div>
