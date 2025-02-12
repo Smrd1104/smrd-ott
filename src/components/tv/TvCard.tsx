@@ -26,7 +26,7 @@ const Card = ({ title, image, videoSrc, year, description }: CardProps) => {
       <img
         src={image}
         alt={title}
-        className="md:w-[250px] w-[120px] md:h-[280px] h-[140px] rounded-md  shadow-lg object-fit transition-opacity duration-300 group-hover:opacity-0"
+        className="md:w-[250px] w-[120px] md:h-[280px] h-[160px] rounded-md  shadow-lg object-fit transition-opacity duration-300 group-hover:opacity-0"
       />
       {/* <div className="absolute bottom-3 left-3 bg-black/50 text-white p-2 drop-shadow rounded-md text-sm">
         {title}
