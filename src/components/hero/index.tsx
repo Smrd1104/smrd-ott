@@ -13,16 +13,16 @@ import video8 from "../../assets/rrr.mp4";
 import video9 from "../../assets/Pushpa2.mp4";
 import video10 from "../../assets/dragon.mp4";
 
-import logo from "../../assets/viddamuyarchi.png";
-import logo2 from "../../assets/goat.png";
-import logo3 from "../../assets/vettaiyan.png";
-import logo4 from "../../assets/raayan.png";
-import logo5 from "../../assets/meiyazhagan.png";
-import logo6 from "../../assets/vikram.png";
-import logo7 from "../../assets/amaran.png";
-import logo8 from "../../assets/rrr-logo2.png";
-import logo9 from "../../assets/pushpa22.png";
-import logo10 from "../../assets/dragon.png";
+import logo from "../../assets/vidaamuyarchi-new.png";
+import logo2 from "../../assets/goat-new.png";
+import logo3 from "../../assets/vettaiyan-new.png";
+import logo4 from "../../assets/raayan-new.png";
+import logo5 from "../../assets/mei-new.png";
+import logo6 from "../../assets/vikram-new.png";
+import logo7 from "../../assets/amaran-new.png";
+import logo8 from "../../assets/rrr-new.png";
+import logo9 from "../../assets/pushpa-new.png";
+import logo10 from "../../assets/dragon-new.png";
 
 import logo11 from "../../assets/vidaamuyarchi.webp";
 import logo12 from "../../assets/goat.jpg";
@@ -246,7 +246,7 @@ const HeroSlider: React.FC = () => {
                 Your browser does not support the video tag.
               </video>
               </div>
-              <div className="lg:hidden absolute">
+              <div className="lg:hidden absolute bg-black/10 opacity-70">
                 <img src={slide.bgImage} alt="image" className="w-[410px] h-[460px]" loading="lazy" />
               </div>
 
@@ -256,32 +256,32 @@ const HeroSlider: React.FC = () => {
                 </button>
               </div>
 
-             <div className="relative md:text-left text-center md:top-54 top-58 md:left-5 z-10 container mx-auto flex flex-col lg:items-start items-center">
+             <div className="relative md:text-left text-center md:top-48 top-58 md:left-5 z-10 container mx-auto flex flex-col lg:items-start items-center">
   {/* Logo */}
   <img
     src={slide.logo}
     alt="Logo"
-    className="md:w-[150px] w-[300px] md:h-auto h-[150px] transition-all duration-300 md:mt-0 mt-2"
+    className="md:w-[250px] w-[300px] md:h-40 h-[150px] transition-all duration-300 md:mt-0 mt-2"
     loading="lazy"
   />
 
   {/* Subtitles */}
-  <div className="lg:block hidden w-1/3">
-    <h2 className="md:text-[1rem] text-[0.8rem] font-bold leading-8 md:mt-2">
+  <div className=" md:w-1/3 md:-mt-8 -mt-10">
+    <h2 className="lg:block hidden md:text-[1rem] text-[0.8rem] font-bold leading-8 md:mt-2">
       {slide.subtitle}
     </h2>
-    <h2 className="font-bold md:text-[1rem] text-[0.8rem] md:mt-5">
+    <h2 className="font-bold md:text-[1rem] text-[1.2rem] md:mt-5 ">
       {slide.subtitle2}
     </h2>
-    <p className="font-bold md:text-[1rem] text-[0.8rem] md:mt-5">
+    <p className="lg:block hidden font-bold md:text-[1rem] text-[0.8rem] md:mt-5 ">
       {slide.description}
     </p>
   </div>
 
   {/* Buttons */}
-  <div className="flex flex-row md:gap-5 gap-3  container mx-auto  md:mt-5 items-center md:justify-start justify-center ">
+  <div className="flex flex-row md:gap-5 gap-3  container mx-auto  md:mt-5  mt-3 items-center md:justify-start justify-center ">
     {/* Watch Now Button */}
-    <button className=" hover:scale-105  duration-300 cursor-pointer  flex flex-row items-center gap-2 md:px-32 px-18 py-2 bg-gradient-to-r from-blue-500/90 to-blue-700/90 rounded-lg mt-1 text-white text-[1.2rem]">
+    <button className=" hover:scale-105  duration-300 cursor-pointer  flex flex-row items-center gap-2 md:px-32 px-10 py-2 bg-gradient-to-r from-blue-500/90 to-blue-700/90 rounded-lg mt-1 text-white text-[1.2rem]">
       <span>
         <FaPlay />
       </span>
@@ -301,14 +301,14 @@ const HeroSlider: React.FC = () => {
 
       <div className="lg:block hidden relative container mx-auto">
         <IoIosArrowBack
-          className={`absolute top-1/2 -translate-y-38 text-[3rem] md:right-91 right-32 z-10 p-3 rounded-full transition cursor-pointer ${
+          className={`absolute top-1/2 -translate-y-40 text-[3rem] md:right-91 right-32 z-10 p-3 rounded-full transition cursor-pointer ${
             isPrevActive ? "text-white" : "text-gray-500 hidden"
           }`}
           id="prevSlide"
         />
 
         <IoIosArrowForward
-          className={`absolute top-1/2 -translate-y-38 text-[3rem] md:right-10 -right-2 z-10 p-3 rounded-full transition cursor-pointer ${
+          className={`absolute top-1/2 -translate-y-40 text-[3rem] md:right-10 -right-2 z-10 p-3 rounded-full transition cursor-pointer ${
             isNextActive ? "text-white" : "text-gray-500 hidden"
           }`}
           id="nextSlide"
@@ -329,7 +329,7 @@ const HeroSlider: React.FC = () => {
             setIsPrevActive(swiper.activeIndex > 0);
             setIsNextActive(swiper.activeIndex < swiper.slides.length - 4);
           }}
-          className="absolute left-1/2 md:-translate-y-32 -translate-y-84 transform -translate-x-3/4 w-1/4 z-10"
+          className="absolute left-1/2 bottom-34 transform -translate-x-3/4 w-1/4 z-10"
         >
           {slides.map((slide, index) => (
             <SwiperSlide
