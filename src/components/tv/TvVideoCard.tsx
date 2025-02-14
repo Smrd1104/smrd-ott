@@ -27,6 +27,7 @@ const VideoCard = ({ videoSrc, title, year, description, }: VideoCardProps) => {
         ref={videoRef}
         className="w-full h-1/2  object-cover"
         muted={isMuted}
+        preload="none"
       >
         <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.

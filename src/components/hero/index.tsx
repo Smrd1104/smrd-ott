@@ -236,7 +236,7 @@ const HeroSlider: React.FC = () => {
                 loop
                 muted={isMuted[index]}
                 playsInline
-              preload="none"
+                preload="none"
               
              
               
