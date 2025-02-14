@@ -7,7 +7,7 @@ const LoadingSpinner: React.FC = () => {
       <img 
         src={loader}// Ensure the correct path
         alt="Loading..."
-        className="w-28 h-28 z-50 absolute"
+        className="w-28 h-28 z-50 absolute " loading="lazy"
       />
 
       {/* Animated Loader Background */}

@@ -13,7 +13,6 @@ import video8 from "../../assets/rrr.mp4";
 import video9 from "../../assets/Pushpa2.mp4";
 import video10 from "../../assets/dragon.mp4";
 
-
 import logo from "../../assets/viddamuyarchi.png";
 import logo2 from "../../assets/goat.png";
 import logo3 from "../../assets/vettaiyan.png";
@@ -24,8 +23,6 @@ import logo7 from "../../assets/amaran.png";
 import logo8 from "../../assets/rrr-logo2.png";
 import logo9 from "../../assets/pushpa22.png";
 import logo10 from "../../assets/dragon.png";
-
-
 
 import logo11 from "../../assets/vidaamuyarchi.webp";
 import logo12 from "../../assets/goat.jpg";
@@ -38,24 +35,17 @@ import logo18 from "../../assets/rrr.jpg";
 import logo19 from "../../assets/pushpa.jpg";
 import logo20 from "../../assets/dragon.jpg";
 
-
 import logoBlack from "../../assets/logo-new.png";
-import bgImage from "../../assets/bgImg-vidaamuyarchi.jpg"
-import bgImage2 from "../../assets/bgimg-goat.jpg"
-import bgImage3 from "../../assets/vettaiyan-bg.jpg"
-import bgImage4 from "../../assets/raayan-bg.jpg"
-import bgImage5 from "../../assets/mei-bg.jpg"
-import bgImage6 from "../../assets/vikram-bg.jpg"
-import bgImage7 from "../../assets/amaran-bg.jpg"
-import bgImage8 from "../../assets/rrr-bg.jpg"
-import bgImage9 from "../../assets/pushpa-bg.jpg"
-import bgImage10 from "../../assets/dragon-bg.jpg"
-
-
-
-
-
-
+import bgImage from "../../assets/bgImg-vidaamuyarchi.jpg";
+import bgImage2 from "../../assets/bgimg-goat.jpg";
+import bgImage3 from "../../assets/vettaiyan-bg.jpg";
+import bgImage4 from "../../assets/raayan-bg.jpg";
+import bgImage5 from "../../assets/mei-bg.jpg";
+import bgImage6 from "../../assets/vikram-bg.jpg";
+import bgImage7 from "../../assets/amaran-bg.jpg";
+import bgImage8 from "../../assets/rrr-bg.jpg";
+import bgImage9 from "../../assets/pushpa-bg.jpg";
+import bgImage10 from "../../assets/dragon-bg.jpg";
 
 import { FaPlay, FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward, IoMdAdd } from "react-icons/io";
@@ -66,10 +56,8 @@ const HeroSlider: React.FC = () => {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const [isMuted, setIsMuted] = useState<boolean[]>(Array(10).fill(true));
   const [videoTimes, setVideoTimes] = useState<number[]>(Array(10).fill(0));
-
   const [isPrevActive, setIsPrevActive] = useState(false);
-  const [isNextActive, setIsNextActive] = useState(true); // Initially, next is active
-
+  const [isNextActive, setIsNextActive] = useState(true);
 
   const toggleMute = (index: number) => {
     const newMutedState = [...isMuted];
@@ -85,7 +73,6 @@ const HeroSlider: React.FC = () => {
     const activeIndex = mainSwiperRef.current.swiper.activeIndex;
     const previousIndex = mainSwiperRef.current.swiper.previousIndex;
 
-    // Pause the previous video and save its current time
     if (videoRefs.current[previousIndex]) {
       videoRefs.current[previousIndex]!.pause();
       const newVideoTimes = [...videoTimes];
@@ -93,24 +80,22 @@ const HeroSlider: React.FC = () => {
       setVideoTimes(newVideoTimes);
     }
 
-    // Play the new video from the saved time
     if (videoRefs.current[activeIndex]) {
       videoRefs.current[activeIndex]!.currentTime = videoTimes[activeIndex];
       videoRefs.current[activeIndex]!.play();
     }
   };
+
   interface Slide {
     id: number;
-    
     bgImage: string;
-    logo:string;
-    thumb:string;
-    title:string;
-    subtitle:string;
-    subtitle2:string;
-    description:string;
-    video:string;
-
+    logo: string;
+    thumb: string;
+    title: string;
+    subtitle: string;
+    subtitle2: string;
+    description: string;
+    video: string;
   }
 
   const slides:Slide[] = [
@@ -218,7 +203,7 @@ const HeroSlider: React.FC = () => {
       video: video10,
     },
   ];
-
+  
   useEffect(() => {
     if (mainSwiperRef.current) {
       mainSwiperRef.current.swiper.on("slideChange", handleSlideChange);
@@ -228,11 +213,10 @@ const HeroSlider: React.FC = () => {
   return (
     <div className="w-full h-auto relative md:pb-0 pb-10">
       <a href="/">
-        <div className="lg:hidden absolute md:top-0 top-2  z-10 flex justify-start  md:drop-shadow   ">
-          <img src={logoBlack} alt="Logo" className="w-14 translate-x-3 h-auto rounded-full" />
+        <div className="lg:hidden absolute md:top-0 top-2 z-10 flex justify-start md:drop-shadow">
+          <img src={logoBlack} alt="Logo" className="w-14 translate-x-3 h-auto rounded-full" loading="lazy" />
         </div>
       </a>
-      {/* Main Swiper */}
       <Swiper
         ref={mainSwiperRef}
         pagination={{ clickable: false }}
@@ -241,110 +225,133 @@ const HeroSlider: React.FC = () => {
         loop={true}
         thumbs={{ swiper: thumbsSwiper }}
         className="w-full h-screen"
+        
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full h-full flex flex-col text-white relative z-10">
-              {/* Video Background */}
+            <div className="w-full h-full flex flex-col text-white relative z-10 ">
+              <div className="lg:block hidden absolute top-0 left-0 w-full h-full opacity-80 z-10">
               <video
                 ref={(el) => (videoRefs.current[index] = el)}
                 loop
                 muted={isMuted[index]}
+                playsInline
+              preload="none"
+              
+             
+              
                 className="lg:block hidden absolute top-0 left-0 md:w-full md:h-full h-[480px] object-cover z-10"
               >
                 <source src={slide.video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+              </div>
               <div className="lg:hidden absolute">
-              <img src={slide.bgImage} alt="image" className="w-[410px] h-[460px]   "/>
+                <img src={slide.bgImage} alt="image" className="w-[410px] h-[460px]" loading="lazy" />
               </div>
 
-              {/* Custom volume control */}
-              <div className="lg:block hidden absolute z-10 right-2 rounded-full py-1 px-2 md:bottom-5 bottom-98   flex items-center gap-2">
-                <button onClick={() => toggleMute(index)} className="text-white cursor-pointer">
-                  {isMuted[index] ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
+              <div className="lg:block hidden absolute z-90  -right-45  rounded-full py-1 px-2 md:bottom-15 w-1/4 h-1/4 flex items-center gap-2">
+                <button onClick={() => toggleMute(index)} className="text-white cursor-pointer mt-4 p-2 bg-white/10 hover:scale-105 bg-opacity-50 rounded-full hover:bg-white/30">
+                  {isMuted[index] ? <FaVolumeMute size={20} className="" /> : <FaVolumeUp size={20} />}
                 </button>
               </div>
 
-              {/* Content Overlay */}
-              <div className="relative md:text-left text-center md:top-78 top-58 md:left-5 z-10 container mx-auto flex flex-col lg:items-start items-center ">
-                <img src={slide.logo} alt="Logo" className="md:w-[150px] w-[300px] md:h-auto h-[150px] transition-all  duration-300 md:mt-0 mt-2" />
-                {/* <h1 className="text-2xl font-bold leading-8 uppercase ">{slide.title}</h1> */}
-                <h2 className="lg:block hidden md:text-[1rem] text-[0.8rem] font-bold leading-8 md:mt-2">{slide.subtitle}</h2>
-                {/* <p className="text-[1rem] max-w-2xl text-gray-300 font-bold leading-8 mt-5">{slide.description}</p> */}
-                <h2 className=" lg:block hidden font-bold md:text-[1rem] text-[0.8rem] md:mt-5">{slide.subtitle2}</h2>
-                <div className="relative flex flex-row md:gap-5  container mx-auto top-0 md:mt-5 lg:items-start items-center md:translate-x-0  translate-x-14 md:translate-y-0 translate-y-4">
-                <button className=" absolute hover:scale-105 hover:border duration-300  cursor-pointer md:top-4 top-0 flex flex-row items-center gap-2   md:px-32 px-18 py-2 bg-gradient-to-r from-blue-500/90 to-blue-700/90 rounded-lg mt-1 text-white text-[1.2rem]">
-                  <span>
-                    <FaPlay />
-                  </span>
-                  Watch Now
-                </button>
-                <div>
-                  <IoMdAdd className=" cursor-pointer absolute  hover:border  hover:scale-105 duration-300 py-2 text-[2.7rem]  md:top-5 top-1.5  md:left-96 left-62 md:translate-x-3 translate-x-5 rounded-lg bg-white/10" />
-                </div>
-              </div>
-              </div>
+             <div className="relative md:text-left text-center md:top-54 top-58 md:left-5 z-10 container mx-auto flex flex-col lg:items-start items-center">
+  {/* Logo */}
+  <img
+    src={slide.logo}
+    alt="Logo"
+    className="md:w-[150px] w-[300px] md:h-auto h-[150px] transition-all duration-300 md:mt-0 mt-2"
+    loading="lazy"
+  />
 
+  {/* Subtitles */}
+  <div className="lg:block hidden w-1/3">
+    <h2 className="md:text-[1rem] text-[0.8rem] font-bold leading-8 md:mt-2">
+      {slide.subtitle}
+    </h2>
+    <h2 className="font-bold md:text-[1rem] text-[0.8rem] md:mt-5">
+      {slide.subtitle2}
+    </h2>
+    <p className="font-bold md:text-[1rem] text-[0.8rem] md:mt-5">
+      {slide.description}
+    </p>
+  </div>
 
-             
+  {/* Buttons */}
+  <div className="flex flex-row md:gap-5 gap-3  container mx-auto  md:mt-5 items-center md:justify-start justify-center ">
+    {/* Watch Now Button */}
+    <button className=" hover:scale-105  duration-300 cursor-pointer  flex flex-row items-center gap-2 md:px-32 px-18 py-2 bg-gradient-to-r from-blue-500/90 to-blue-700/90 rounded-lg mt-1 text-white text-[1.2rem]">
+      <span>
+        <FaPlay />
+      </span>
+      Watch Now
+    </button>
+
+    {/* Add Button */}
+    
+      <IoMdAdd className="  cursor-pointer  hover:bg-white/40 hover:scale-105 duration-300 py-2 text-[2.7rem] mt-1 rounded-lg bg-white/30" />
+    
+  </div>
+</div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* Thumbnail Swiper */}
-      <div className="lg:block hidden relative container mx-auto ">
-      {/* Custom Navigation Buttons */}
-      <IoIosArrowBack
-        className={`absolute top-1/2 -translate-y-44 text-[3rem] md:right-91 right-32 z-10 
-        p-3 rounded-full transition cursor-pointer ${
-          isPrevActive ? "text-white" : "text-gray-500 hidden"
-        }`}
-        id="prevSlide"
-      />
+      <div className="lg:block hidden relative container mx-auto">
+        <IoIosArrowBack
+          className={`absolute top-1/2 -translate-y-38 text-[3rem] md:right-91 right-32 z-10 p-3 rounded-full transition cursor-pointer ${
+            isPrevActive ? "text-white" : "text-gray-500 hidden"
+          }`}
+          id="prevSlide"
+        />
 
-      <IoIosArrowForward
-        className={`absolute top-1/2 -translate-y-44 text-[3rem] md:right-10 -right-2 z-10 
-        p-3 rounded-full transition cursor-pointer ${
-          isNextActive ? "text-white" : "text-gray-500 hidden"
-        }`}
-        id="nextSlide"
-      />
+        <IoIosArrowForward
+          className={`absolute top-1/2 -translate-y-38 text-[3rem] md:right-10 -right-2 z-10 p-3 rounded-full transition cursor-pointer ${
+            isNextActive ? "text-white" : "text-gray-500 hidden"
+          }`}
+          id="nextSlide"
+        />
 
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        spaceBetween={10}
-        slidesPerView={4}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[Thumbs, Navigation]}
-        navigation={{
-          nextEl: "#nextSlide",
-          prevEl: "#prevSlide",
-        }}
-        onSlideChange={(swiper) => {
-          setIsPrevActive(swiper.activeIndex > 0); // Change color when moving left
-          setIsNextActive(swiper.activeIndex < swiper.slides.length - 4); // Change color when moving right
-        }}
-        className="absolute left-1/2 md:-translate-y-38 -translate-y-84 transform -translate-x-3/4 w-1/4 z-10"
-      >
-        {slides.map((slide, index) => (
-          <SwiperSlide
-            key={index}
-            onClick={() => mainSwiperRef.current.swiper.slideTo(index)}
-          >
-            <img
-              src={slide.thumb}
-              alt="Logo"
-              className="hover:scale-105 cursor-pointer duration-300 md:w-[100px] md:h-[70px] rounded transition-all"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+        <Swiper
+          onSwiper={setThumbsSwiper}
+          spaceBetween={10}
+          slidesPerView={4}
+          freeMode={true}
+          watchSlidesProgress={true}
+          modules={[Thumbs, Navigation]}
+          navigation={{
+            nextEl: "#nextSlide",
+            prevEl: "#prevSlide",
+          }}
+          onSlideChange={(swiper) => {
+            setIsPrevActive(swiper.activeIndex > 0);
+            setIsNextActive(swiper.activeIndex < swiper.slides.length - 4);
+          }}
+          className="absolute left-1/2 md:-translate-y-32 -translate-y-84 transform -translate-x-3/4 w-1/4 z-10"
+        >
+          {slides.map((slide, index) => (
+            <SwiperSlide
+              key={index}
+              onClick={() => mainSwiperRef.current.swiper.slideTo(index)}
+            >
+              <img
+                src={slide.thumb}
+                alt="Logo"
+                className="hover:scale-105 cursor-pointer duration-300 md:w-[100px] md:h-[70px] rounded transition-all"
+                loading="lazy"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };
 
 export default HeroSlider;
+
+
+
+

@@ -7,6 +7,7 @@ interface VideoCardProps {
   title: string;
   year: string;
   description: string;
+  lazy:string;
 }
 
 const VideoCard = ({ videoSrc, title, year, description }: VideoCardProps) => {
@@ -25,8 +26,10 @@ const VideoCard = ({ videoSrc, title, year, description }: VideoCardProps) => {
       <video
         autoPlay
         ref={videoRef}
+        preload="none"
         className="w-full h-1/2  object-cover"
         muted={isMuted}
+        
       >
         <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
