@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Navigation, Thumbs } from "swiper/modules";
+import { Navigation, Thumbs,Autoplay, Pagination} from "swiper/modules";
 import video1 from "../../assets/Vidaamuyarchi.mp4";
 import video2 from "../../assets/goat.mp4";
 import video3 from "../../assets/Vettaiyan.mp4";
@@ -219,11 +219,22 @@ const HeroSlider: React.FC = () => {
       </a>
       <Swiper
         ref={mainSwiperRef}
-        pagination={{ clickable: false }}
-        modules={[Navigation, Thumbs]}
-        autoplay
+        // pagination={{ clickable: false }}
+        modules={[Navigation, Thumbs, Autoplay,Pagination]}
+        // autoplay={{ delay: 3000, disableOnInteraction: false }} // Proper autoplay config
         loop={true}
         thumbs={{ swiper: thumbsSwiper }}
+        breakpoints={{
+          320: { // Extra small screens
+            autoplay: { delay: 3000, disableOnInteraction: false }, pagination: { clickable: true }
+          ,navigation:true},
+          640: { // Small screens
+            autoplay: { delay: 5000, disableOnInteraction: false }, pagination: { clickable: true },navigation:true}
+          ,
+          1024: { // Large screens
+            // autoplay: { delay: 7000, disableOnInteraction: false }
+          }
+        }}
         className="w-full h-screen"
         
       >
@@ -237,7 +248,7 @@ const HeroSlider: React.FC = () => {
                 muted={isMuted[index]}
                 playsInline
                 preload="none"
-              
+                
              
               
                 className="lg:block hidden absolute top-0 left-0 md:w-full md:h-full h-[480px] object-cover z-10"
@@ -247,7 +258,7 @@ const HeroSlider: React.FC = () => {
               </video>
               </div>
               <div className="lg:hidden absolute bg-black/10 opacity-70">
-                <img src={slide.bgImage} alt="image" className="w-[410px] h-[460px]" loading="lazy" />
+                <img  src={slide.bgImage} alt="image" className="w-[410px] h-[460px]" loading="lazy" />
               </div>
 
               <div className="lg:block hidden absolute z-90  -right-45  rounded-full py-1 px-2 md:bottom-15 w-1/4 h-1/4 flex items-center gap-2">
