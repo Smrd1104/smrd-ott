@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { FaHome, FaSearch, FaUser, FaLaptop, FaVolleyballBall } from "react-icons/fa";
-import { BiCameraMovie, BiSolidCategory } from "react-icons/bi";
+import { BiSolidCategory } from "react-icons/bi";
 import logoBlack from "../../assets/logo-new.png";
+import { LucidePopcorn } from "lucide-react";
 
 type SidebarProps = {
   setIsExpanded: React.Dispatch<React.SetStateAction<boolean>>;
@@ -13,7 +14,7 @@ const NAV_LINKS = [
   { name: "Search", href: "/search", icon: <FaSearch size={20} /> },
   { name: "Home", href: "/", icon: <FaHome size={20} /> },
   { name: "Web-Series", href: "/web-series", icon: <FaLaptop size={20} /> },
-  { name: "Movies", href: "/movies", icon: <BiCameraMovie size={20} /> },
+  { name: "Movies", href: "/movies", icon: <LucidePopcorn  size={20} /> },
   { name: "Sports", href: "/sports", icon: <FaVolleyballBall size={20} /> },
   { name: "Categories", href: "/categories", icon: <BiSolidCategory size={20} /> },
 ];
