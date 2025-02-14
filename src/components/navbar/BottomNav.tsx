@@ -6,7 +6,7 @@ const BottomNav = () => {
     { name: "Home", icon: Home, path: "/" },
     { name: "Search", icon: Search, path: "/search" },
     { name: "Categories", icon: List, path: "/categories" },
-    { name: "Profile", icon: User, path: "/" },
+    { name: "Profile", icon: User, path: "/profile" },
   ];
 
   return (
@@ -17,7 +17,7 @@ const BottomNav = () => {
           to={path}
           className={({ isActive }) =>
             `flex flex-col items-center text-sm ${
-              isActive ? "text-white" : "text-gray-400"
+              isActive ? "text-white drop-shadow" : "text-gray-400"
             }`
           }
         >
