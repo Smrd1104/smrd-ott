@@ -7,7 +7,7 @@ interface VideoCardProps {
   title: string;
   year: string;
   description: string;
-  lazy:string;
+  
 }
 
 const VideoCard = ({ videoSrc, title, year, description }: VideoCardProps) => {
