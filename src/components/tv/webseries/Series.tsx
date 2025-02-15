@@ -70,21 +70,21 @@ const Index = () => {
   };
 
   return (
-    <div className="container mx-auto overflow-hidden md:py-10 ">
-      <div className="flex flex-row justify-between items-center md:px-4 md:pb-0 ppb-5">
+    <div className="container mx-auto overflow-hidden ">
+      <div className="flex flex-row justify-between items-center md:px-4 px-2 md:pb-0 pb-5">
         <a href="/web-series">
           <h1 className="md:text-[2.5rem] text-[1.3rem] drop-shadow-header font-bold">
             Web-Series
           </h1>
         </a>
-        <div className="flex flex-row gap-2 text-gray-200 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center">
-          <a href="/web-series">
-            <h3 className="md:text-[1rem] text-[1rem] font-md ">View All</h3>
-          </a>
-          <span className="text-[1rem]">
-            <IoIosArrowForward />
-          </span>
-        </div>
+       <div className="flex flex-row gap-2 text-gray-200 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center z-10">
+  <a href="/web-series">
+    <h3 className="md:text-[1rem] text-[1rem] font-md">View All</h3>
+  </a>
+  <span className="text-[1rem]">
+    <IoIosArrowForward />
+  </span>
+</div>
       </div>
 
       <div
@@ -94,7 +94,7 @@ const Index = () => {
       >
         {/* Left Navigation */}
         <IoIosArrowBack
-          className={`lg:block hidden absolute left-1 md:left-6 top-1/2 transform -translate-y-1/2 z-10 p-3 rounded-full bg-black/20 text-[3rem] cursor-pointer transition ${
+          className={` absolute left-1 md:left-6 top-1/2 transform -translate-y-1/2 z-10 p-3 rounded-full bg-black/20 text-[3rem] cursor-pointer transition ${
             isHovered && isPrevActive ? "text-white" : "text-gray-500 hidden"
           }`}
           id="series-prevSlide"
@@ -102,7 +102,7 @@ const Index = () => {
 
         {/* Right Navigation */}
         <IoIosArrowForward
-          className={`lg:block hidden absolute right-1 md:right-6 top-1/2 transform -translate-y-1/2 z-10 p-3 rounded-full bg-black/20 text-[3rem] cursor-pointer transition ${
+          className={` absolute right-1 md:right-6 top-1/2 transform -translate-y-1/2 z-10 p-3 rounded-full bg-black/20 text-[3rem] cursor-pointer transition ${
             isHovered && isNextActive ? "text-white" : "text-gray-500 hidden"
           }`}
           id="series-nextSlide"

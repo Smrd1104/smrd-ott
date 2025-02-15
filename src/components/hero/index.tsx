@@ -211,7 +211,7 @@ const HeroSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full h-auto relative md:pb-0 pb-10">
+    <div className="w-full h-auto relative md:py-0 py-10">
       <a href="/">
         <div className="lg:hidden absolute md:top-0 top-2 z-10 flex justify-start md:drop-shadow">
           <img src={logoBlack} alt="Logo" className="w-14 translate-x-3 h-auto rounded-full" loading="lazy" />
