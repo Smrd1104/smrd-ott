@@ -53,21 +53,21 @@ const movies = [
 ];
 
 const Index = () => {
-  const [filteredMovies, setFilteredMovies] = useState(movies);
+  // const [filteredMovies, setFilteredMovies] = useState(movies);
   const [isPrevActive, setIsPrevActive] = useState(false);
   const [isNextActive, setIsNextActive] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleSearch = (query: string) => {
-    if (!query.trim()) {
-      setFilteredMovies(movies);
-      return;
-    }
-    const results = movies.filter((movie) =>
-      movie.title.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredMovies(results);
-  };
+  // const handleSearch = (query: string) => {
+  //   if (!query.trim()) {
+  //     setFilteredMovies(movies);
+  //     return;
+  //   }
+  //   const results = movies.filter((movie) =>
+  //     movie.title.toLowerCase().includes(query.toLowerCase())
+  //   );
+  //   setFilteredMovies(results);
+  // };
 
   return (
     <div className="container mx-auto overflow-hidden ">
