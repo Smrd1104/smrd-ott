@@ -1,26 +1,21 @@
-import FlipCard from '../../../components/movies/movie/MovieImageCard';
-import img1 from "../../../assets/vidaamuyarchi.webp";
-import img2 from "../../../assets/vettaiyan.jpg";
-import img3 from "../../../assets/goat.jpg";
-import img4 from "../../../assets/mei.jpg";
-import img5 from "../../../assets/amaran.jpg";
-import img6 from "../../../assets/dragon.jpg";
-import img7 from "../../../assets/Pushpa2.jpg";
-import img8 from "../../../assets/rrr.jpg";
-import img9 from "../../../assets/raayan-bg.jpg";
-import img10 from "../../../assets/vikram.jpg";
-
-
-import bgVideo1 from "../../../assets/Vidaamuyarchi.mp4";
-import bgVideo2 from "../../../assets/Vettaiyan.mp4"
-import bgVideo3 from "../../../assets/goat.mp4"
-import bgVideo4 from "../../../assets/meiyazhagan.mp4"
-import bgVideo5 from "../../../assets/amaran.mp4"
-import bgVideo6 from "../../../assets/dragon.mp4"
-import bgVideo7 from "../../../assets/Pushpa2.mp4"
-import bgVideo8 from "../../../assets/rrr.mp4"
-import bgVideo9 from "../../../assets/raayan.mp4"
-import bgVideo10 from "../../../assets/vikram.mp4"
+import FlipCard from '../../../components/sports/sport/SportImageCard';
+import img1 from "../../../assets/football.jpg";
+import img2 from "../../../assets/archery.jpg";
+import img3 from "../../../assets/tennis.jpg";
+import img4 from "../../../assets/cricket.jpg";
+import img5 from "../../../assets/baseball.jpg";
+import img6 from "../../../assets/hockey.jpg";
+import img7 from "../../../assets/golf.jpg";
+import img8 from "../../../assets/volly.jpg";
+// videos
+import bgVideo1 from "../../../assets/bg-video-movie.mp4";
+import bgVideo2 from "../../../assets/bg-1.mp4"
+import bgVideo3 from "../../../assets/bg-2.mp4"
+import bgVideo4 from "../../../assets/bg-3.mp4"
+import bgVideo5 from "../../../assets/bg-4.mp4"
+import bgVideo6 from "../../../assets/bg-5.mp4"
+import bgVideo7 from "../../../assets/2bg.mp4"
+import bgVideo8 from "../../../assets/4bg.mp4"
 
 
 import logo from "../../../assets/vidaamuyarchi-new.png";
@@ -38,7 +33,7 @@ import logo10 from "../../../assets/vikram-new.png";
 
 
 import { useState } from 'react';
-// import SearchBar from '../../components/search/SearchBar';
+// import SearchBar from '../../../components/search/SearchBar';
 import "swiper/swiper-bundle.css";
 import { Swiper, SwiperSlide,  } from "swiper/react";
 
@@ -54,8 +49,8 @@ const movies = [
   { id: 6,logo:logo6, image: img6, videoSrc:bgVideo6,title: "The Boys", description: "Noble families fight for control of the Iron Throne." },
   { id: 7,logo:logo7, image: img7, videoSrc:bgVideo7,title: "Super Natural", description: "Noble families fight for control of the Iron Throne." },
   { id: 8,logo:logo8, image: img8, videoSrc:bgVideo8,title: "Elite", description: "Noble families fight for control of the Iron Throne." },
-  { id: 9,logo:logo9, image: img9, videoSrc:bgVideo9,title: "Pushpa 2", description: "Noble families fight for control of the Iron Throne." },
-  { id: 10,logo:logo10, image: img10,videoSrc:bgVideo10, title: "Meiyazhagan", description: "Noble families fight for control of the Iron Throne." },
+  { id: 9,logo:logo9, image: img5, videoSrc:bgVideo5,title: "Pushpa 2", description: "Noble families fight for control of the Iron Throne." },
+  { id: 10,logo:logo10, image: img8,videoSrc:bgVideo8, title: "Meiyazhagan", description: "Noble families fight for control of the Iron Throne." },
   { id: 11,logo:logo, image: img3,videoSrc:bgVideo5, title: "Raayan", description: "Noble families fight for control of the Iron Throne." },
   { id: 12,logo:logo, image: img4,videoSrc:bgVideo4, title: "GOAT", description: "Noble families fight for control of the Iron Throne." },
   { id: 13,logo:logo, image: img5,videoSrc:bgVideo3, title: "Vidaamuyarchi", description: "Noble families fight for control of the Iron Throne." },
@@ -91,7 +86,7 @@ const Index = () => {
       <div className="flex flex-row justify-between items-center md:px-4 px-2 md:pb-0 pb-5">
         <a href="/movies">
           <h1 className="md:text-[2.5rem] text-[1.3rem] drop-shadow-header font-bold">
-          Exclusive New Movies
+           Continue Sports
           </h1>
         </a>
        <div className="flex flex-row gap-2 text-gray-200 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center z-10">
@@ -114,7 +109,7 @@ const Index = () => {
           className={` absolute left-1 md:left-6 top-1/2 transform -translate-y-1/2 z-10 p-3 rounded-full bg-black/20 text-[3rem] cursor-pointer transition ${
             isHovered && isPrevActive ? "text-white" : "text-gray-500 hidden"
           }`}
-          id="movie-prevSlide"
+          id="sport-prevSlide"
         />
 
         {/* Right Navigation */}
@@ -122,7 +117,7 @@ const Index = () => {
           className={` absolute right-1 md:right-6 top-1/2 transform -translate-y-1/2 z-10 p-3 rounded-full bg-black/20 text-[3rem] cursor-pointer transition ${
             isHovered && isNextActive ? "text-white" : "text-gray-500 hidden"
           }`}
-          id="movie-nextSlide"
+          id="sport-nextSlide"
         />
 
         <Swiper
@@ -136,8 +131,8 @@ const Index = () => {
           }}
           
           navigation={{
-            nextEl: "#movie-nextSlide",
-            prevEl: "#movie-prevSlide",
+            nextEl: "#sport-nextSlide",
+            prevEl: "#sport-prevSlide",
           }}
           onInit={(swiper) => {
             setIsPrevActive(false);

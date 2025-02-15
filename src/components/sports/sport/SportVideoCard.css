@@ -1,0 +1,73 @@
+.video-card {
+    perspective: 100px;
+height: 100px;
+    width: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    overflow-x: hidden;
+    
+  }
+  
+  /* .video-card:hover {
+    transform: scale(1.25); 
+    z-index: 90; 
+  } */
+  
+  .video-card-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .video-card-front,
+  .video-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    
+  }
+  
+  .video-card-front {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .video-card-back {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    
+  }
+  
+  .video-card-back button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  /* Adjust width & height for medium screens */
+/* @media (max-width: 1024px) { 
+    .video-card {
+        width: 200px;
+        height: 290px;
+    }
+} */
+
+/* Adjust width & height for small screens */
+@media (max-width: 640px) { 
+    .video-card {
+        width: 150px;
+        height: 220px;
+    }
+}

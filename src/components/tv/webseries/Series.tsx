@@ -74,7 +74,7 @@ const Index = () => {
       <div className="flex flex-row justify-between items-center md:px-4 px-2 md:pb-0 pb-5">
         <a href="/web-series">
           <h1 className="md:text-[2.5rem] text-[1.3rem] drop-shadow-header font-bold">
-            Web-Series
+            Watch New Web-Series
           </h1>
         </a>
        <div className="flex flex-row gap-2 text-gray-200 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center z-10">

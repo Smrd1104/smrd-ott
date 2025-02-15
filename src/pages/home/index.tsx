@@ -1,5 +1,5 @@
 import HeroSlider from '../../components/hero'
-import Sports from '../../components/sports/Sports'
+import Sports from '../../components/sports/sport/Sport'
 import Movies from '../../components/movies/movie/Movie'
 import Tv from '../../components/tv/webseries/Series'
 import Category from '../category/index'
