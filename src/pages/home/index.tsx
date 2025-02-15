@@ -1,7 +1,7 @@
 import HeroSlider from '../../components/hero'
 import Sports from '../../components/sports/Sports'
 import Movies from '../../components/movies/Movies'
-import Tv from '../../components/tv/Tv'
+import Tv from '../../components/tv/webseries/Series'
 import Category from '../category/index'
 
 import BottomNav from '../../components/navbar/BottomNav'

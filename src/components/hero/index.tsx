@@ -267,7 +267,7 @@ const HeroSlider: React.FC = () => {
                 </button>
               </div>
 
-             <div className="relative md:text-left text-center md:top-48 top-58 md:left-5 z-10 container mx-auto flex flex-col lg:items-start items-center">
+             <div className="relative  md:text-left text-center md:top-48 top-58 md:left-5 z-10 container mx-auto flex flex-col lg:items-start items-center">
   {/* Logo */}
   <img
     src={slide.logo}
@@ -277,7 +277,7 @@ const HeroSlider: React.FC = () => {
   />
 
   {/* Subtitles */}
-  <div className=" md:w-1/3 md:-mt-8 -mt-10">
+  <div className=" md:w-1/3  md:-mt-8 -mt-10">
     <h2 className="lg:block hidden md:text-[1rem] text-[0.8rem] font-bold leading-8 md:mt-2">
       {slide.subtitle}
     </h2>
