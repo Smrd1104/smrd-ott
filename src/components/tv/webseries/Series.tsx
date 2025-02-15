@@ -134,8 +134,8 @@ const Index = () => {
           className=""
         >
           <div className="flex flex-wrap space-y-3 justify-center ">
-            {filteredMovies.length > 0 ? (
-              filteredMovies.map((movie) => (
+            {movies.length > 0 ? (
+              movies.map((movie) => (
                 <SwiperSlide key={movie.id} className=''>
                   <FlipCard
                     key={movie.id}
