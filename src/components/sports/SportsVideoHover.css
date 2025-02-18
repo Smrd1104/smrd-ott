@@ -1,62 +1,64 @@
-.card {
-    perspective: 100px;
-    width: 220px;
-    height: 290px;
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    overflow-x: hidden;
-    z-index: auto;
-  }
+.video-card-hover {
+  perspective: 100px;
+  width: 220px;
+  height: 290px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  overflow-x: hidden;
   
-  .card:hover {
-    transform: scale(1.25); /* Scale effect when hovering */
-    z-index: 90; /* Ensure the card appears on top when hovered */
-  }
+}
+
+/* .video-card-hover:hover {
+  transform: scale(1.25); 
+  z-index: 90; 
+} */
+
+.video-card-hover-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.video-card-hover-front,
+.video-card-hover-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
   
-  .card-content {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 0.3s ease-in-out;
-  }
+}
+
+.video-card-hover-front {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.video-card-hover-back {
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
   
-  .card-front,
-  .card-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .card-front {
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .card-back {
-    background-color: #333;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotateY(180deg);
-  }
-  
-  .card-back button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  /* Adjust width & height for medium screens */
+}
+
+.video-card-hover-back button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Adjust width & height for medium screens */
 @media (max-width: 1024px) { 
-  .card {
+  .video-card-hover {
       width: 180px;
       height: 250px;
   }
@@ -64,8 +66,8 @@
 
 /* Adjust width & height for small screens */
 @media (max-width: 640px) { 
-  .card {
-      width: 130px;
-      height: 150px;
+  .video-card-hover {
+      width: 150px;
+      height: 220px;
   }
 }

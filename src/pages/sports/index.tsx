@@ -61,13 +61,13 @@ const Index = () => {
       setFilteredMovies(results);
     };
   return (
-    <div id="sports" className='container mx-auto overflow-hidden'>
+    <div id="sports" className='container mx-auto overflow-hidden '>
 
        <div className="w-full flex justify-center">
         <SearchBar onSearch={handleSearch} />
       </div>
       <h1 className="text-center text-[3rem] drop-shadow-header">Sports</h1>
-     <div className="grid md:grid-cols-5 grid-cols-2 space-y-3 justify-center md:px-4 px-14 py-10">
+     <div className="grid md:grid-cols-5 grid-cols-3 md:px-14 px-4  md:space-y-1 gap-3 justify-center py-8">
         {filteredMovies.length > 0 ? (
           filteredMovies.map((movie) => (
             <FlipCard
