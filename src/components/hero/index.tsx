@@ -35,7 +35,7 @@ import logo18 from "../../assets/rrr.jpg";
 import logo19 from "../../assets/pushpa.jpg";
 import logo20 from "../../assets/dragon.jpg";
 
-import logoBlack from "../../assets/logo-new.png";
+import logoBlack from "../../assets/jio-logo.png";
 import bgImage from "../../assets/bgImg-vidaamuyarchi.jpg";
 import bgImage2 from "../../assets/bgimg-goat.jpg";
 import bgImage3 from "../../assets/vettaiyan-bg.jpg";

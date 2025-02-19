@@ -22,7 +22,7 @@ function App() {
       const timer = setTimeout(() => {
         setLoading(false);
         sessionStorage.setItem("appLoaded", "true");
-      }, 10000); // 3 seconds
+      }, 3000); // 3 seconds
 
       return () => clearTimeout(timer);
     }
