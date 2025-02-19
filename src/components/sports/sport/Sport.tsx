@@ -84,13 +84,13 @@ const Index = () => {
   return (
     <div className="container mx-auto overflow-hidden ">
       <div className="flex flex-row justify-between items-center md:px-4 px-2 md:pb-0 pb-5">
-        <a href="/movies">
+        <a href="/sports">
           <h1 className="md:text-[2.5rem] text-[1.3rem] drop-shadow-header font-bold">
            Continue Sports
           </h1>
         </a>
        <div className="flex flex-row gap-2 text-gray-200 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center z-10">
-  <a href="/movies">
+  <a href="/sports">
     <h3 className="md:text-[1rem] text-[1rem] font-md">View All</h3>
   </a>
   <span className="text-[1rem]">

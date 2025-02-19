@@ -211,7 +211,7 @@ const HeroSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full h-auto relative md:py-0">
+    <div className="w-full h-auto relative md:pb-0 pb-10">
       <a href="/">
         <div className="lg:hidden absolute md:top-0 top-2 z-10 flex justify-start md:drop-shadow">
           <img src={logoBlack} alt="Logo" className="w-14 translate-x-3 h-auto rounded-full" loading="lazy" />
@@ -240,7 +240,7 @@ const HeroSlider: React.FC = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full h-full flex flex-col text-white relative z-10 ">
+            <div className="w-full h-full flex flex-col text-white relative z-10  ">
               <div className="lg:block hidden absolute top-0 left-0 w-full h-full opacity-80 z-10">
               <video
                 ref={(el) => (videoRefs.current[index] = el)}
