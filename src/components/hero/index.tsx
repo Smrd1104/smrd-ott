@@ -279,7 +279,7 @@ const HeroSlider: React.FC = () => {
   {/* Subtitles */}
   <div className=" md:w-1/3  md:-mt-8 -mt-10">
     <h2 className="lg:block hidden md:text-[1rem] text-[0.8rem] font-bold leading-8 md:mt-2">
-      {slide.subtitle}
+     <span className="bg-gray-300/30 px-2 rounded py-1 font-extrabold text-[1rem] ">Trailer</span> | {slide.subtitle}
     </h2>
     <h2 className="font-bold md:text-[1rem] text-[1.2rem] md:mt-5 ">
       {slide.subtitle2}
