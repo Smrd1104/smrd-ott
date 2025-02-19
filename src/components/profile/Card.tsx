@@ -1,4 +1,3 @@
-import React from 'react'
 import img from "../../assets/JioStar.jpg"
 import plus from "../../assets/plus-logo.png"
 const card = () => {
