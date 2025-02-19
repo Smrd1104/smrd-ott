@@ -1,5 +1,4 @@
 import img from "../../assets/jio-logo.png";
-import bg from "../../assets/bg-login.jpg";
 
 const Index = () => {
   return (
