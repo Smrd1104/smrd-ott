@@ -292,7 +292,7 @@ const HeroSlider: React.FC = () => {
   {/* Buttons */}
   <div className="flex flex-row md:gap-5 gap-3  container mx-auto  md:mt-5  mt-3 items-center md:justify-start justify-center ">
     {/* Watch Now Button */}
-    <button className=" hover:scale-105  duration-300 cursor-pointer  flex flex-row items-center gap-2 md:px-32 px-10 py-2 bg-gradient-to-r from-blue-500/90 to-blue-700/90 rounded-lg mt-1 text-white text-[1.2rem]">
+    <button className=" hover:scale-105  duration-300 cursor-pointer  flex flex-row items-center gap-2 md:px-32 px-10 py-2  bg-gradient-to-r from-[#003bfe]  to-[#bf0732] rounded-lg mt-1 text-white text-[1.2rem]">
       <span>
         <FaPlay />
       </span>
