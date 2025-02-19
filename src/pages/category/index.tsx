@@ -7,6 +7,9 @@ import img5 from "../../assets/zee.jpg";
 import img6 from "../../assets/hotstar.jpg";
 import img7 from "../../assets/hbo.jpg";
 import img8 from "../../assets/discovery.jpg";
+import img9 from "../../assets/JioStar.jpg";
+
+
 
 import bgVideo1 from "../../assets/vikram.mp4";
 import bgVideo2 from "../../assets/Vettaiyan.mp4"
@@ -35,7 +38,7 @@ const movies = [
   { id: 6,logo:logo, image: img6, videoSrc:bgVideo6,title: "Meiyazhagan", description: "Noble families fight for control of the Iron Throne." },
   { id: 7,logo:logo, image: img7, videoSrc:bgVideo7,title: "Pushpa 2", description: "Noble families fight for control of the Iron Throne." },
   { id: 8,logo:logo, image: img8, videoSrc:bgVideo8,title: "RRR", description: "Noble families fight for control of the Iron Throne." },
-  { id: 9,logo:logo, image: img1, videoSrc:bgVideo7,title: "Pushpa 2", description: "Noble families fight for control of the Iron Throne." },
+  { id: 9,logo:logo, image: img9, videoSrc:bgVideo7,title: "Pushpa 2", description: "Noble families fight for control of the Iron Throne." },
   { id: 10,logo:logo, image: img2,videoSrc:bgVideo6, title: "Meiyazhagan", description: "Noble families fight for control of the Iron Throne." },
   // { id: 11,logo:logo, image: img3,videoSrc:bgVideo5, title: "Raayan", description: "Noble families fight for control of the Iron Throne." },
   // { id: 12,logo:logo, image: img4,videoSrc:bgVideo4, title: "GOAT", description: "Noble families fight for control of the Iron Throne." },

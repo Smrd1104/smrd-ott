@@ -1,8 +1,8 @@
 import React from "react";
-import loader from "../../assets/logo-new.png"
+import loader from "../../assets/jio-logo.png"
 const LoadingSpinner: React.FC = () => {
   return (
-    <div className="flex flex-col gap-4 w-full items-center justify-center relative">
+    <div className="flex flex-col gap-4 w-full items-center justify-center relative h-screen bg-gradient-to-r from-[#009dfe] via-[#5847fd] to-[#713afd]">
       {/* Logo Image */}
       <img 
         src={loader}// Ensure the correct path

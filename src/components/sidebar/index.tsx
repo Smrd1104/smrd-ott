@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { FaHome, FaSearch, FaUser, FaLaptop, FaVolleyballBall } from "react-icons/fa";
 import { BiSolidCategory } from "react-icons/bi";
-import logoBlack from "../../assets/logo-new.png";
+import logoBlack from "../../assets/jio-logo.png";
 import { LucidePopcorn } from "lucide-react";
 
 type SidebarProps = {
