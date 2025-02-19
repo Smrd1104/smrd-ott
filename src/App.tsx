@@ -7,7 +7,7 @@ import Movie from "./pages/movie"
 import Tv from "./pages/tv"
 import Sports from "./pages/sports"
 import Category from "./pages/category"
-
+import Profile from "./pages/profile"
 import BottomNav from "./components/navbar/BottomNav";
 
 
@@ -52,6 +52,8 @@ function App() {
             <Route path="/web-series" element={<Tv />} />
             <Route path="/sports" element={<Sports />} />
             <Route path="/categories" element={<Category />} />
+            <Route path="/profile" element={<Profile />} />
+
             {/* <Route path="/search" element={<SearchBar />} /> */}
 
 
