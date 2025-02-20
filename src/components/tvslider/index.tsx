@@ -211,7 +211,7 @@ const HeroSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full h-auto relative md:pb-0 pb-10">
+    <div className="w-full h-auto relative md:pb-0 pb-10 ">
       <a href="/">
         <div className="lg:hidden absolute md:top-0 top-2 z-10 flex justify-start md:drop-shadow">
           <img src={logoBlack} alt="Logo" className="w-14 translate-x-3 h-auto rounded-full" loading="lazy" />
@@ -251,17 +251,17 @@ const HeroSlider: React.FC = () => {
                 
              
               
-                className="lg:block hidden absolute top-0 left-0 md:w-full md:h-full h-[480px] object-cover z-10"
+                className="hidden absolute top-0 left-0 md:w-full md:h-full h-[480px] object-cover z-10"
               >
                 <source src={slide.video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               </div>
-               <div className=" absolute lg:hidden right-0 left-0 w-full md:h-screen h-[500px] inset-0 bg-gradient-to-r from-black/90 via-white/10 to-transparent opacity-50 ">
-                              <img  src={slide.bgImage} alt="image" className="md:w-full  md:h-full h-[500px] object-fit" loading="lazy" />
-                            </div>
+              <div className=" absolute right-0 left-0 w-full md:h-screen h-[500px] inset-0 bg-gradient-to-r from-black/90 via-white/10 to-transparent opacity-50 ">
+                <img  src={slide.bgImage} alt="image" className="md:w-full  md:h-full h-[500px] object-fit" loading="lazy" />
+              </div>
 
-              <div className="lg:block hidden absolute z-90  -right-45  rounded-full py-1 px-2 md:bottom-15 w-1/4 h-1/4 flex items-center gap-2">
+              <div className=" hidden absolute z-90  -right-45  rounded-full py-1 px-2 md:bottom-15 w-1/4 h-1/4 flex items-center gap-2">
                 <button onClick={() => toggleMute(index)} className="text-white cursor-pointer mt-4 p-2 bg-white/10 hover:scale-105 bg-opacity-50 rounded-full hover:bg-white/30">
                   {isMuted[index] ? <FaVolumeMute size={20} className="" /> : <FaVolumeUp size={20} />}
                 </button>
@@ -277,7 +277,7 @@ const HeroSlider: React.FC = () => {
   />
 
   {/* Subtitles */}
-  <div className=" md:w-1/3  md:-mt-8 -mt-10">
+  <div className=" md:w-1/3  md:-mt-8 -mt-10 ">
     <h2 className="lg:block hidden md:text-[1rem] text-[0.8rem] font-bold leading-8 md:mt-2">
      <span className="bg-gray-300/30 px-2 rounded py-1 font-extrabold text-[1rem] ">Trailer</span> | {slide.subtitle}
     </h2>

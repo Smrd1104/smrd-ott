@@ -22,6 +22,7 @@ import logo2 from "../../assets/goat.png";
 import logo3 from "../../assets/vettaiyan.png";
 import { useState } from 'react';
 import SearchBar from '../../components/search/SearchBar';
+import TvSlider from "../../components/tvslider"
 
 const movies = [
   { id: 1,logo:logo, image: img1,videoSrc:bgVideo1, title: "Wednesday", description: "A forensic expert moonlights as a vigilante serial killer." },
@@ -62,11 +63,12 @@ const Index = () => {
   };
   return (
     <div id="web-series" className='container mx-auto overflow-hidden'>
-     <div className="w-full flex justify-center">
+     {/* <div className="w-full flex justify-center">
         <SearchBar onSearch={handleSearch} />
-      </div>
-      <h1 className="text-center text-[3rem] drop-shadow-header">Web-Series</h1>
-     <div className="grid md:grid-cols-5 grid-cols-2 space-y-3 justify-center md:px-4 px-14 py-10">
+      </div> */}
+      <TvSlider/>
+      <h1 className="text-center text-[3rem] drop-shadow-header md:mt-0  -mt-96 ">Web-Series</h1>
+     <div className="grid md:grid-cols-5 grid-cols-3 space-y-3 justify-center md:px-4 px-2 py-10">
         {filteredMovies.length > 0 ? (
           filteredMovies.map((movie) => (
             <FlipCard
