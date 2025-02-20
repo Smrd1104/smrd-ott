@@ -21,7 +21,7 @@ import logo from "../../assets/wednesday.png";
 import logo2 from "../../assets/goat.png";
 import logo3 from "../../assets/vettaiyan.png";
 import { useState } from 'react';
-import SearchBar from '../../components/search/SearchBar';
+// import SearchBar from '../../components/search/SearchBar';
 import TvSlider from "../../components/tvslider"
 
 const movies = [
@@ -51,16 +51,16 @@ const movies = [
 const Index = () => {
   const [filteredMovies, setFilteredMovies] = useState(movies);
 
-  const handleSearch = (query: string) => {
-    if (!query.trim()) {
-      setFilteredMovies(movies);
-      return;
-    }
-    const results = movies.filter((movie) =>
-      movie.title.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredMovies(results);
-  };
+  // const handleSearch = (query: string) => {
+  //   if (!query.trim()) {
+  //     setFilteredMovies(movies);
+  //     return;
+  //   }
+  //   const results = movies.filter((movie) =>
+  //     movie.title.toLowerCase().includes(query.toLowerCase())
+  //   );
+  //   setFilteredMovies(results);
+  // };
   return (
     <div id="web-series" className='container mx-auto overflow-hidden'>
      {/* <div className="w-full flex justify-center">
