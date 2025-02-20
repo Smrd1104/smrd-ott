@@ -49,7 +49,7 @@ const movies = [
 ];
 
 const Index = () => {
-  const [filteredMovies, setFilteredMovies] = useState(movies);
+  // const [filteredMovies, setFilteredMovies] = useState(movies);
 
   // const handleSearch = (query: string) => {
   //   if (!query.trim()) {
@@ -69,8 +69,8 @@ const Index = () => {
       <TvSlider/>
       <h1 className="text-center text-[3rem] drop-shadow-header md:mt-0  -mt-96 ">Web-Series</h1>
      <div className="grid md:grid-cols-5 grid-cols-3 space-y-3 justify-center md:px-4 px-2 py-10">
-        {filteredMovies.length > 0 ? (
-          filteredMovies.map((movie) => (
+        {movies.length > 0 ? (
+          movies.map((movie) => (
             <FlipCard
               key={movie.id}
               logo={movie.logo}
