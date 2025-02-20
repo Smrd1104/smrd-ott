@@ -20,7 +20,7 @@ import bgVideo8 from "../../assets/rrr.mp4"
 import logo from "../../assets/wednesday.png";
 import logo2 from "../../assets/goat.png";
 import logo3 from "../../assets/vettaiyan.png";
-import { useState } from 'react';
+// import { useState } from 'react';
 // import SearchBar from '../../components/search/SearchBar';
 import TvSlider from "../../components/tvslider"
 
