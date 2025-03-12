@@ -70,17 +70,18 @@ const Index = () => {
   // };
 
   return (
-    <div className="container mx-auto overflow-hidden ">
-      <div className="flex flex-row justify-between items-center md:px-4 px-2 md:pb-0 pb-5">
+    <div className="container mx-auto overflow-hidden md:mt-0 mt-20">
+      <div className="flex flex-row justify-between  items-center md:px-4 px-2 md:pb-0 pb-5">
         <a href="/web-series">
-          <h1 className="md:text-[2.5rem] text-[1.3rem] drop-shadow-header font-bold">
+          <h1 className="md:text-[2.5rem]  text-[1.3rem] drop-shadow-header font-bold ">
             Watch New Web-Series
           </h1>
         </a>
-       <div className="flex flex-row gap-2 text-gray-200 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center z-10">
+ <div className="flex flex-row gap-2 text-gray-200 cursor-pointer hover:scale-105 duration-300 hover:text-white items-center z-10">
   <a href="/web-series">
-    <h3 className="md:text-[1rem] text-[1rem] font-md">View All</h3>
+    <h3 className="md:text-[1rem]  text-[1rem] font-md">View All</h3>
   </a>
+  
   <span className="text-[1rem]">
     <IoIosArrowForward />
   </span>
