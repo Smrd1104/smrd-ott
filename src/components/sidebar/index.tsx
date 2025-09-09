@@ -1,16 +1,16 @@
 import React, { useState, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { FaHome, FaSearch, FaUser, FaLaptop, FaVolleyballBall } from "react-icons/fa";
+import {FaUser} from "react-icons/fa";
 import { BiSolidCategory } from "react-icons/bi";
-import { LucidePopcorn } from "lucide-react";
 import logoBlack from "../../assets/jio-logo.png";
+import { House,Search,Laptop,Popcorn,Volleyball     } from 'lucide-react';
 
 const NAV_LINKS = [
-  { name: "Home", href: "/", icon: <FaHome size={22} /> },
-  { name: "Search", href: "/search", icon: <FaSearch size={22} /> },
-  { name: "Web-Series", href: "/web-series", icon: <FaLaptop size={22} /> },
-  { name: "Movies", href: "/movies", icon: <LucidePopcorn size={22} /> },
-  { name: "Sports", href: "/sports", icon: <FaVolleyballBall size={22} /> },
+  { name: "Home", href: "/", icon: <House size={22} /> },
+  { name: "Search", href: "/search", icon: <Search size={22} /> },
+  { name: "Web-Series", href: "/web-series", icon: <Laptop  size={22} /> },
+  { name: "Movies", href: "/movies", icon: <Popcorn  size={22} /> },
+  { name: "Sports", href: "/sports", icon: <Volleyball  size={22} /> },
   { name: "Categories", href: "/categories", icon: <BiSolidCategory size={22} /> },
   { name: "Profile", href: "/profile", icon: <FaUser size={22} /> },
 ];
