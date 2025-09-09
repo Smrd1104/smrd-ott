@@ -57,7 +57,7 @@ const Index = () => {
    const [isPrevActive, setIsPrevActive] = useState(false);
       const [isNextActive, setIsNextActive] = useState(true); 
   return (
-    <div id="" className="container mx-auto  p-2  relative z-50">
+    <div id="" className="container mx-auto  p-2  relative z-0">
     <div className="flex flex-row justify-between items-center">
       <a href="/">
       <h1 className="md:text-[2.5rem] text-[1.3rem]  drop-shadow-header font-bold">
