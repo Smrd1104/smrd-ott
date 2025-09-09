@@ -12,7 +12,7 @@ import BottomNav from "./components/navbar/BottomNav";
 
 
 function App() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  // const [isExpanded, setIsExpanded] = useState(false);
   const [loading, setLoading] = useState(() => {
     return sessionStorage.getItem("appLoaded") ? false : true;
   });
@@ -40,12 +40,12 @@ function App() {
    
       <div className="flex min-h-screen bg-black text-white">
         {/* Sidebar */}
-        <div className={`${isExpanded ? "md:w-40" : "md:w-14"} transition-all duration-300`}>
-          <Sidebar setIsExpanded={setIsExpanded} />
+        <div className={` transition-all duration-300`}>
+          <Sidebar/>
         </div>
         <BottomNav/>
         {/* Main Content */}
-        <div className="flex-1 overflow-y-auto bg-black relative transition-all duration-300">
+        <div className="flex-1 ml-20  overflow-y-auto bg-black relative transition-all duration-300">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/movies" element={<Movie />} />
@@ -54,11 +54,7 @@ function App() {
             <Route path="/categories" element={<Category />} />
             <Route path="/profile" element={<Profile />} />
 
-            {/* <Route path="/search" element={<SearchBar />} /> */}
-
-
-
-
+         
 
           </Routes>
         </div>
@@ -68,3 +64,11 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
